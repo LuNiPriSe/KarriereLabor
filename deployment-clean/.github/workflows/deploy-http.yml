@@ -1,0 +1,83 @@
+name: Deploy to Surfer (HTTP)
+
+on:
+  push:
+    branches: [ master, main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Prepare deployment
+      run: |
+        # Create deployment archive
+        mkdir -p dist
+
+        # Copy all necessary files
+        cp -r assets dist/
+        cp -r de dist/
+        cp -r en dist/
+        cp -r es dist/
+        cp index.html dist/
+        cp impressum.html dist/
+
+        # Create archive for upload
+        cd dist
+        tar -czf ../site.tar.gz .
+        cd ..
+
+        echo "📦 Site packaged successfully"
+        echo "📊 Archive size: $(du -h site.tar.gz | cut -f1)"
+
+    - name: Deploy via HTTP API
+      env:
+        SURFER_URL: ${{ secrets.SURFER_URL }}
+        SURFER_TOKEN: ${{ secrets.SURFER_TOKEN }}
+        SURFER_DOMAIN: ${{ secrets.SURFER_DOMAIN }}
+      run: |
+        # Deploy using HTTP API (adjust based on your Surfer setup)
+        echo "🚀 Deploying to Surfer..."
+
+        # Method 1: Direct file upload (if Surfer supports it)
+        if [ -n "$SURFER_URL" ] && [ -n "$SURFER_TOKEN" ]; then
+          curl -X POST \
+            -H "Authorization: Bearer $SURFER_TOKEN" \
+            -H "Content-Type: application/gzip" \
+            --data-binary @site.tar.gz \
+            "$SURFER_URL/api/deploy/$SURFER_DOMAIN" \
+            --fail --show-error
+
+          echo "✅ Deployment completed via HTTP API"
+        else
+          echo "❌ Missing required secrets: SURFER_URL and SURFER_TOKEN"
+          exit 1
+        fi
+
+    - name: Verify deployment
+      env:
+        SURFER_DOMAIN: ${{ secrets.SURFER_DOMAIN }}
+      run: |
+        # Wait a moment for deployment to propagate
+        sleep 10
+
+        # Check if site is accessible
+        if curl -f -s "https://$SURFER_DOMAIN" > /dev/null; then
+          echo "✅ Site is live at https://$SURFER_DOMAIN"
+        else
+          echo "⚠️ Site might still be deploying..."
+        fi
+
+    - name: Deployment Summary
+      env:
+        SURFER_DOMAIN: ${{ secrets.SURFER_DOMAIN }}
+      run: |
+        echo "## 🚀 Deployment Summary" >> $GITHUB_STEP_SUMMARY
+        echo "- **Status**: ✅ Completed" >> $GITHUB_STEP_SUMMARY
+        echo "- **Domain**: https://$SURFER_DOMAIN" >> $GITHUB_STEP_SUMMARY
+        echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Time**: $(date)" >> $GITHUB_STEP_SUMMARY

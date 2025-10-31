@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <title>Dr. Prill Sempere - Coaching de Carrera y Asesoría de Fundadores | AVGS & BAFA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Coaching profesional de carrera y asesoría de fundadores con más de 20 años de experiencia. Financiado por AVGS (gratis) y BAFA. Orientación profesional, preparación de entrevistas, estrategia de negocio.">
+    <meta name="keywords" content="Coaching Profesional Alemania, Coaching de Carrera, Asesoría de Fundadores, AVGS, BAFA, Consultoría Startup, Coaching Entrevistas, Business Coach, Pitch Deck, Career Coaching Deutschland, Coaching Emprendedores">
+    <meta name="author" content="Dr. Luis Prill Sempere">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bigbrainbusiness.de/es/index.html">
+
+    <!-- Alternate Language Links -->
+    <link rel="alternate" hreflang="de" href="https://bigbrainbusiness.de/de/index.html">
+    <link rel="alternate" hreflang="en" href="https://bigbrainbusiness.de/en/index.html">
+    <link rel="alternate" hreflang="es" href="https://bigbrainbusiness.de/es/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://bigbrainbusiness.de/de/index.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dr. Prill Sempere - Coaching de Carrera y Asesoría de Fundadores">
+    <meta property="og:description" content="Coaching profesional con más de 20 años de experiencia. Financiado por AVGS (gratis) y BAFA. Claridad. Estrategia. Éxito.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bigbrainbusiness.de/es/index.html">
+    <meta property="og:image" content="https://bigbrainbusiness.de/assets/images/coach-portrait-luis-prill.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="Dr. Prill Sempere Coaching">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dr. Prill Sempere - Coaching de Carrera y Asesoría de Fundadores">
+    <meta name="twitter:description" content="Coaching profesional con más de 20 años de experiencia. Financiado por AVGS y BAFA. Claridad. Estrategia. Éxito.">
+    <meta name="twitter:image" content="https://bigbrainbusiness.de/assets/images/coach-portrait-luis-prill.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+
+    <!-- Preload first 3 hero slides for instant rendering without flash -->
+    <link rel="preload" href="../assets/images/hero-1-career-discovery.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="../assets/images/hero-2-research-analyze.jpg" as="image">
+    <link rel="preload" href="../assets/images/hero-3-application-experiment.jpg" as="image">
+
+    <!-- CRITICAL CSS INLINE - Instant LCP rendering, zero blocking -->
+    <style>
+        /* Critical base styles for instant hero rendering */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #000;
+            color: #fff;
+        }
+
+        /* Critical hero gallery structure */
+        .hero-gallery-modern {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background: #1A1A1A;
+        }
+
+        .hero-slide {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Critical first 3 slide backgrounds - inline for instant rendering without flash */
+        .hero-slide-1 {
+            background: url('../assets/images/gallery-bg-1-clarity-direction.jpg') center/cover no-repeat;
+            background-color: #FFFBF0; /* Fallback during load */
+        }
+        .hero-slide-2 {
+            background: url('../assets/images/hero-2-funding-accessible.jpg') center/cover no-repeat;
+            background-color: #FFFBF0;
+        }
+        .hero-slide-3 {
+            background: url('../assets/images/hero-2-research-analyze.jpg') center/cover no-repeat;
+            background-color: #FFFBF0;
+        }
+        /* Slides 4-5 load from main CSS with fallback */
+        .hero-slide-4, .hero-slide-5 {
+            background-color: #F5F1E8;
+        }
+
+        /* Critical hero h1 - LCP element with full styling */
+        .slide-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 20;
+            max-width: min(85vw, 1100px);
+            width: 100%;
+            padding: 0 max(1rem, 3vw);
+        }
+
+        .slide-content h1 {
+            font-size: clamp(2.5rem, 6.5vw, 5.5rem);
+            font-weight: 700;
+            margin-bottom: clamp(1.75rem, 3.5vh, 2.75rem);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            color: #2C2C2C;
+            max-width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 0 2px 4px rgba(255,255,255,0.8), 0 4px 8px rgba(255,255,255,0.6);
+        }
+
+        .slide-subtitle {
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            line-height: 1.6;
+            color: rgba(44,44,44,0.85);
+            margin-bottom: 2rem;
+        }
+    </style>
+
+    <!-- Main CSS - NON-BLOCKING load after critical content renders -->
+    <link rel="stylesheet" href="../assets/css/styles-refined.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="../assets/css/styles-refined.css"></noscript>
+
+    <!-- Swiper CSS - non-blocking load -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+</head>
+<body>
+
+<!-- Floating Logo (Top Left) -->
+<div class="floating-logo">
+    <a href="#" class="logo-icon-link" aria-label="KarriereLabor - Tu Laboratorio de Carrera">
+        <img src="../assets/images/KarriereLaborLogo.svg" alt="KarriereLabor" class="logo-icon">
+        <img src="../assets/images/KarriereLaborText.svg" alt="KarriereLabor" class="logo-text">
+    </a>
+</div>
+
+<!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Modern Hero Gallery with Swiper -->
+<section class="hero-gallery-modern">
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <div class="language-toggle">🇪🇸</div>
+        <div class="language-dropdown">
+            <a href="../de/index.html" title="Deutsch" hreflang="de" lang="de">🇩🇪 Deutsch</a>
+            <a href="../en/index.html" title="English" hreflang="en" lang="en">🇬🇧 English</a>
+            <a href="./index.html" class="active" title="Español" hreflang="es" lang="es">🇪🇸 Español</a>
+        </div>
+    </div>
+
+    <div class="swiper hero-swiper" id="heroGallery">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide hero-slide hero-slide-1 active">
+                <div class="slide-content">
+                    <h1>¿Busca Trabajo o Ingresos?</h1>
+                    <p class="slide-subtitle">Le ayudamos a encontrar su camino individual. Claridad, estrategia y pasos concretos hacia su objetivo.</p>
+                    <div class="slide-actions">
+                        <a href="#booking" class="karriere-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Reservar Consulta Inicial
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide hero-slide hero-slide-2">
+                <div class="slide-content">
+                    <h1>Gratis en la Mayoría de los Casos</h1>
+                    <p class="slide-subtitle">Somos expertos en financiación AVGS y BAFA. Coaching profesional sin barreras financieras.</p>
+                    <div class="slide-actions">
+                        <a href="#services" class="karriere-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Explorar Financiación
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide hero-slide hero-slide-3">
+                <div class="slide-content">
+                    <h1>¿No Está Seguro Cuál es el Mejor Camino?</h1>
+                    <p class="slide-subtitle">Analizamos juntos en nuestro laboratorio. Investigación, metodología y estrategias precisas para su carrera.</p>
+                    <div class="slide-actions">
+                        <a href="#services" class="karriere-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Nuestra Metodología
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide hero-slide hero-slide-4">
+                <div class="slide-content">
+                    <h1>Encontrar Confianza. Practicar. Tener Éxito.</h1>
+                    <p class="slide-subtitle">Dominar solicitudes, descubrir fortalezas, encontrar trabajos que realmente quiere. De la duda a la confianza.</p>
+                    <div class="slide-actions">
+                        <a href="#use-cases" class="karriere-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Coaching de Carrera
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide hero-slide hero-slide-5">
+                <div class="slide-content">
+                    <h1>¿Tiene una Idea?</h1>
+                    <p class="slide-subtitle">Le ayudamos con el concepto, a superar obstáculos y con la financiación de fundadores. BAFA – hasta 80% de subsidio.</p>
+                    <div class="slide-actions">
+                        <a href="#booking" class="karriere-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Comenzar Coaching de Fundadores
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Elements -->
+        <div class="swiper-pagination gallery-nav"></div>
+        <div class="gallery-navigation">
+            <button type="button" class="gallery-nav-btn gallery-prev" aria-label="Previous slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <button type="button" class="gallery-nav-btn gallery-next" aria-label="Next slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="comparison-section" id="services">
+    <div class="inner">
+        <h2 class="section-title scroll-animate">Sus Opciones de Coaching</h2>
+        <p class="section-subtitle scroll-animate">
+            Apoyo profesional para carrera y emprendimiento – financiado por AVGS y BAFA (Alemania)
+        </p>
+
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-hybrid scroll-animate stagger-1">
+                <div class="comparison-icon">🧭</div>
+                <div class="comparison-image">
+                    <img src="../assets/images/coaching-perspektive.jpg" alt="Coaching de Perspectiva">
+                </div>
+                <h3>Coaching de Perspectiva</h3>
+                <p><strong>Descubra y desarrolle su potencial</strong></p>
+                <ul>
+                    <li>Análisis Ikigai: Encuentre su propósito de vida</li>
+                    <li>Identifique fortalezas y talentos</li>
+                    <li>Clarifique necesidades y deseos</li>
+                    <li>Balance de vida y satisfacción</li>
+                    <li>Dirección de desarrollo personal</li>
+                </ul>
+            </div>
+
+            <div class="comparison-card comparison-hybrid scroll-animate stagger-2">
+                <div class="comparison-icon">💼</div>
+                <div class="comparison-image">
+                    <img src="../assets/images/coaching-karriere.jpg" alt="Coaching de Carrera">
+                </div>
+                <h3>Coaching de Carrera</h3>
+                <p><strong>Desarrollo profesional y reorientación</strong></p>
+                <ul>
+                    <li>Reorientación profesional</li>
+                    <li>Preparación de entrevistas</li>
+                    <li>Personal Branding y LinkedIn</li>
+                    <li>Negociación salarial</li>
+                    <li><strong>Financiado por AVGS: Gratis con cupón (solo Alemania)</strong></li>
+                </ul>
+            </div>
+
+            <div class="comparison-card comparison-hybrid scroll-animate stagger-3">
+                <div class="comparison-icon">🚀</div>
+                <div class="comparison-image">
+                    <img src="../assets/images/coaching-gruender.jpg" alt="Asesoría de Fundadores">
+                </div>
+                <h3>Asesoría de Fundadores</h3>
+                <p><strong>De la idea al negocio exitoso</strong></p>
+                <ul>
+                    <li>Desarrollo de modelo de negocio</li>
+                    <li>Creación de pitch deck</li>
+                    <li>Estrategia y roadmap</li>
+                    <li>Preparación para inversores</li>
+                    <li><strong>Financiado por BAFA: Hasta 80% de subsidio (solo Alemania)</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="methodology-meta scroll-animate">
+            <p class="methodology-intro">
+                ✨ Más de 20 años de experiencia como fundador: Empresario activo desde 2002, experimentado en coaching financiado por AVGS y BAFA. Experiencia práctica para su éxito.
+            </p>
+            <div class="xray-wrapper">
+                <div class="xray-toggle">
+                    Qué puede esperar
+                </div>
+                <div class="xray-content">
+                    <div class="xray-grid">
+                        <div class="xray-column">
+                            <h4>Mi Experiencia</h4>
+                            <ul>
+                                <li>✅ Más de 20 años de experiencia como fundador (desde 2002)</li>
+                                <li>✅ Numerosos coachings exitosos AVGS/BAFA</li>
+                                <li>✅ Certificado AVGS (Agencia de Empleo Alemana)</li>
+                                <li>✅ Experiencia BAFA (financiación de fundadores)</li>
+                                <li>✅ Multilingüe: DE / EN / ES</li>
+                            </ul>
+                        </div>
+                        <div class="xray-column">
+                            <h4>Metodología de Coaching</h4>
+                            <ul>
+                                <li>✅ Enfoque sistemático de 3 fases</li>
+                                <li>✅ Definición individual de objetivos</li>
+                                <li>✅ Estrategias prácticas</li>
+                                <li>✅ Seguimiento regular de progreso</li>
+                                <li>✅ Horarios flexibles</li>
+                            </ul>
+                        </div>
+                        <div class="xray-column">
+                            <h4>Financiación y Precios</h4>
+                            <ul>
+                                <li>✅ Financiación AVGS: 100% de cobertura</li>
+                                <li>✅ Financiación BAFA: hasta 80% de subsidio</li>
+                                <li>✅ Privado: €80-150 por sesión</li>
+                                <li>✅ Consulta inicial gratuita (15 min.)</li>
+                                <li>✅ Apoyo con proceso de solicitud</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Methodology Section -->
+<section class="services-section" id="methodology">
+    <div class="inner">
+        <h2 class="section-title scroll-animate">Mi Metodología de Coaching</h2>
+        <p class="section-subtitle scroll-animate">
+            Enfoque sistemático de 3 fases para su éxito sostenible
+        </p>
+        <div class="services-grid">
+            <div class="service-card scroll-animate stagger-1">
+                <div class="service-icon">🔍</div>
+                <h3>1. Descubrir</h3>
+                <p><strong>Evaluación &amp; Definición de Objetivos</strong></p>
+                <ul>
+                    <li>Análisis de su situación actual</li>
+                    <li>Clarificación de sus objetivos y deseos</li>
+                    <li>Identificación de fortalezas y potenciales</li>
+                    <li>Reconocimiento de obstáculos</li>
+                    <li>Establecer expectativas realistas</li>
+                </ul>
+                <a href="#booking" class="karriere-button">Agendar Consulta Inicial</a>
+            </div>
+            <div class="service-card scroll-animate stagger-2">
+                <div class="service-icon">🗺️</div>
+                <h3>2. Desarrollar Estrategia</h3>
+                <p><strong>Planificación → Roadmap → Plan de Acción</strong></p>
+                <ul>
+                    <li>Planificación estratégica de sus próximos pasos</li>
+                    <li>Desarrollo de opciones de acción concretas</li>
+                    <li>Creación de su roadmap personal</li>
+                    <li>Preparación para desafíos</li>
+                    <li>Definición de hitos medibles</li>
+                </ul>
+                <a href="#booking" class="karriere-button">Reservar Sesión de Estrategia</a>
+            </div>
+            <div class="service-card scroll-animate stagger-3">
+                <div class="service-icon">⚡</div>
+                <h3>3. Implementar &amp; Lograr</h3>
+                <p><strong>Acción → Orientación → Éxito</strong></p>
+                <ul>
+                    <li>Implementación de su estrategia con orientación</li>
+                    <li>Seguimiento regular de progreso</li>
+                    <li>Ajustes ágiles cuando sea necesario</li>
+                    <li>Motivación y responsabilidad</li>
+                    <li>Anclaje sostenible del éxito</li>
+                </ul>
+                <a href="#booking" class="karriere-button">Iniciar Coaching</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Use Cases Section -->
+<section class="use-cases-section" id="use-cases">
+    <div class="inner">
+        <h2 class="section-title scroll-animate">Nuestros Servicios de Coaching</h2>
+        <p class="section-subtitle scroll-animate">
+            Apoyo práctico para su desarrollo profesional
+        </p>
+
+        <div class="use-cases-interactive">
+            <!-- Left Menu -->
+            <div class="use-case-menu">
+                <div class="use-case-tab active" data-case="career-transition">
+                    <div class="tab-icon">🔄</div>
+                    <span>Transición de Carrera</span>
+                </div>
+                <div class="use-case-tab" data-case="interview-prep">
+                    <div class="tab-icon">💼</div>
+                    <span>Preparación de Entrevistas</span>
+                </div>
+                <div class="use-case-tab" data-case="founder-strategy">
+                    <div class="tab-icon">🚀</div>
+                    <span>Estrategia de Fundadores</span>
+                </div>
+                <div class="use-case-tab" data-case="personal-branding">
+                    <div class="tab-icon">✨</div>
+                    <span>Personal Branding</span>
+                </div>
+                <div class="use-case-tab" data-case="salary-negotiation">
+                    <div class="tab-icon">💰</div>
+                    <span>Negociación Salarial</span>
+                </div>
+                <div class="use-case-tab" data-case="business-clarity">
+                    <div class="tab-icon">🎯</div>
+                    <span>Claridad de Negocio</span>
+                </div>
+            </div>
+
+            <!-- Center Image -->
+            <div class="use-case-visualization">
+                <div class="use-case-image active" data-case="career-transition">
+                    <img src="../assets/images/use-case-career-transition.jpg" alt="Coaching de Transición de Carrera" loading="lazy">
+                </div>
+                <div class="use-case-image" data-case="interview-prep">
+                    <img src="../assets/images/use-case-interview-prep.jpg" alt="Preparación de Entrevistas" loading="lazy">
+                </div>
+                <div class="use-case-image" data-case="founder-strategy">
+                    <img src="../assets/images/use-case-founder-strategy.jpg" alt="Estrategia de Fundadores" loading="lazy">
+                </div>
+                <div class="use-case-image" data-case="personal-branding">
+                    <img src="../assets/images/use-case-personal-branding.jpg" alt="Personal Branding" loading="lazy">
+                </div>
+                <div class="use-case-image" data-case="salary-negotiation">
+                    <img src="../assets/images/use-case-salary-negotiation.jpg" alt="Negociación Salarial" loading="lazy">
+                </div>
+                <div class="use-case-image" data-case="business-clarity">
+                    <img src="../assets/images/use-case-business-clarity.jpg" alt="Claridad de Negocio" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Right Description -->
+            <div class="use-case-details">
+                <div class="use-case-content active" data-case="career-transition">
+                    <h3>Coaching de Transición de Carrera</h3>
+                    <p>¿Está en una encrucijada profesional? Juntos encontraremos claridad sobre su futuro profesional. Analizamos sus fortalezas, exploramos nuevas posibilidades y desarrollamos un plan de acción concreto para su exitosa transición de carrera.</p>
+                    <div class="use-case-metrics">
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">✅ Financiado por AVGS</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Financiación:</strong> Cupón de Activación y Colocación</p>
+                                <p>100% de cobertura por la Agencia de Empleo Alemana o Centro de Empleo. Le apoyamos con el proceso de solicitud. <a href="https://www.arbeitsagentur.de/karriere-und-weiterbildung/foerderung-berufliche-weiterbildung" target="_blank" rel="noopener">Más sobre financiación AVGS</a></p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🎯 Individual</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Su Camino:</strong> Coaching personalizado</p>
+                                <p>Sin programas estándar. Su situación, sus objetivos, su solución.</p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">💼 Experiencia desde 2002</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Experiencia:</strong> Más de 20 años de experiencia práctica</p>
+                                <p>Como fundador y empresario, conozco ambos lados: solicitante y empleador.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="use-case-content" data-case="interview-prep">
+                    <h3>Preparación de Entrevistas</h3>
+                    <p>Preparación profesional para entrevistas de trabajo con simulaciones, feedback y estrategia. Optimizamos sus documentos de solicitud, practicamos situaciones típicas de entrevista y fortalecemos su confianza para la presentación decisiva.</p>
+                    <div class="use-case-metrics">
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🎭 Simulaciones</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Práctica:</strong> Simulación realista</p>
+                                <p>Practicamos situaciones reales de entrevista – con feedback constructivo.</p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">📄 Revisión de Documentos</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Optimización:</strong> CV y Carta de Presentación</p>
+                                <p>Revisión profesional de sus documentos de solicitud para máximo impacto. <a href="https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/bewerbung" target="_blank" rel="noopener">Consejos de solicitud</a></p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">💪 Confianza</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Mentalidad:</strong> Presentación segura</p>
+                                <p>Fortalecemos su confianza interior para una actuación convincente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-case-content" data-case="founder-strategy">
+                    <h3>Estrategia de Fundadores y Desarrollo de Negocio</h3>
+                    <p>Del concepto al negocio exitoso: Desarrollamos juntos su modelo de negocio, creamos un plan de acción claro y le preparamos óptimamente para reuniones con inversores. Con más de 20 años de experiencia como fundador y metodología probada de coaching BAFA, le apoyo de manera práctica.</p>
+                    <div class="use-case-metrics">
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🏢 Financiado por BAFA</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Financiación:</strong> Oficina Federal de Economía</p>
+                                <p>Hasta 80% de subsidio para asesoría de fundadores (Alemania). Le apoyamos con la solicitud. <a href="https://www.bafa.de/DE/Wirtschafts_Mittelstandsfoerderung/Beratung_Finanzierung/beratung_finanzierung_node.html" target="_blank" rel="noopener">Más sobre financiación BAFA</a></p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">📊 Creación de Pitch Deck</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Listo para Inversores:</strong> Presentación profesional</p>
+                                <p>Desarrollamos juntos su pitch deck convincente para reuniones con inversores.</p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🚀 Más de 20 Años de Práctica desde 2002</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Experiencia Práctica:</strong> Larga trayectoria como fundador</p>
+                                <p>He fundado varias empresas yo mismo y tengo amplia experiencia en asesoría de fundadores financiada.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-case-content" data-case="personal-branding">
+                    <h3>Personal Branding y Optimización de LinkedIn</h3>
+                    <p>Su marca personal hace la diferencia: Desarrollamos su posicionamiento auténtico, optimizamos su perfil de LinkedIn y creamos una estrategia de contenido que le hace visible como experto. Profesional, auténtico, impactante.</p>
+                    <div class="use-case-metrics">
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">💼 Perfil de LinkedIn</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Optimización:</strong> Presencia profesional</p>
+                                <p>Titular, Acerca de, Destacado - optimizamos su perfil completo de LinkedIn. <a href="https://www.linkedin.com/help/linkedin/answer/a548633" target="_blank" rel="noopener">Consejos para perfil de LinkedIn</a></p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">✨ Estrategia de Contenido</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Visibilidad:</strong> Estatus auténtico de experto</p>
+                                <p>Desarrollamos su estrategia individual de contenido para éxito sostenible.</p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🎯 Posicionamiento</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Valor Único:</strong> ¿Qué le hace especial?</p>
+                                <p>Desarrollamos su posicionamiento claro y auténtico en el mercado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-case-content" data-case="salary-negotiation">
+                    <h3>Negociación Salarial y Diseño de Contrato</h3>
+                    <p>Gane más con mejor preparación: Analizamos su valor de mercado, desarrollamos su estrategia de negociación y practicamos la conversación en simulaciones realistas. Confiado, profesional, exitoso.</p>
+                    <div class="use-case-metrics">
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">💰 Análisis de Valor de Mercado</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Investigación:</strong> ¿Cuánto vale usted?</p>
+                                <p>Investigamos juntos rangos salariales realistas para su posición. <a href="https://www.glassdoor.com/Salaries/index.htm" target="_blank" rel="noopener">Comparación salarial Glassdoor</a></p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🎯 Táctica de Negociación</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Estrategia:</strong> Preparación profesional</p>
+                                <p>Desarrollamos su estrategia individual de negociación con argumentos.</p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🎭 Simulaciones</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Práctica:</strong> Simulación realista</p>
+                                <p>Entrenamos la conversación de negociación hasta que se sienta seguro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-case-content" data-case="business-clarity">
+                    <h3>Claridad de Modelo de Negocio para Fundadores</h3>
+                    <p>De la idea al modelo de negocio claro: Estructuramos su concepto con Business Model Canvas, validamos sus suposiciones y desarrollamos un plan realista de go-to-market. Sistemático, práctico, accionable.</p>
+                    <div class="use-case-metrics">
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">📋 Business Model Canvas</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Metodología:</strong> Desarrollo estructurado</p>
+                                <p>Utilizamos frameworks probados para su modelo de negocio. <a href="https://www.strategyzer.com/business-model-canvas" target="_blank" rel="noopener">Más sobre Business Model Canvas</a></p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">✅ Validación</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Market-Fit:</strong> Probar suposiciones</p>
+                                <p>Desarrollamos pruebas para sus suposiciones críticas de negocio.</p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🚀 Estrategia GTM</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Go-to-Market:</strong> Plan realista</p>
+                                <p>Del concepto a la estrategia concreta de entrada al mercado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Visual Methodology Flow Section (duplicate removed - see methodology section above) -->
+<!-- Booking Section with Coach Profile -->
+<section class="booking-section" id="booking">
+    <div class="inner">
+        <h2 class="section-title scroll-animate">Agendar Consulta Inicial Gratuita</h2>
+
+        <div class="booking-grid">
+            <div class="booking-profile-card scroll-animate">
+                <div class="profile-card-inner">
+                    <div class="profile-card-content">
+                        <h3>Dr. Luis Prill Sempere</h3>
+                        <p class="founder-role">Business Coach y Asesor de Fundadores</p>
+                        <p class="founder-subtitle">PhD Física · Más de 20 años de experiencia como fundador desde 2002</p>
+
+                        <div class="founder-credentials">
+                            <p>🚀 Más de 20 Años de Experiencia como Fundador & Coaching AVGS/BAFA</p>
+                            <p>✅ Certificado AVGS • Experiencia BAFA</p>
+                            <p>🌍 Multilingüe: Deutsch, English, Español</p>
+                            <p>💼 Coaching de Carrera y Asesoría de Fundadores con experiencia práctica</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-content scroll-animate">
+                <h2>Hablemos sobre sus objetivos</h2>
+
+                <div class="booking-note scroll-animate" style="margin-top: var(--space-lg); margin-bottom: var(--space-xl); padding: var(--space-lg); background: rgba(255, 255, 255, 0.9); border-left: 4px solid var(--light-orange); border-radius: var(--radius-md);">
+                    <p style="color: var(--deep-charcoal); font-size: 0.95rem; line-height: 1.7; margin-bottom: var(--space-sm); font-weight: 600;">💼 <strong>AVGS</strong> (solo Alemania): ¡El coaching de carrera puede ser gratis para usted! Le apoyamos con la solicitud del Cupón de Activación y Colocación en su Agencia de Empleo o Centro de Empleo.</p>
+                    <p style="color: var(--deep-charcoal); font-size: 0.95rem; line-height: 1.7; margin: 0; font-weight: 600;">🚀 <strong>BAFA</strong> (solo Alemania): ¡La asesoría de fundadores está subsidiada hasta un 80%! Le ayudamos a solicitar la financiación BAFA para asesoría de fundación.</p>
+                </div>
+
+                <div class="booking-widget">
+                    <div class="booking-fallback">
+                        <a href="https://cal.com/luniprise/15min" class="karriere-button" target="_blank" rel="noopener">
+                            📅 Consulta Inicial de 15 min (gratis)
+                        </a>
+                        <a href="https://cal.com/luniprise/30min" class="karriere-button" target="_blank" rel="noopener">
+                            📅 Reservar Consulta de 30 min
+                        </a>
+                        <a href="mailto:contact@bigbrainbusiness.de" class="karriere-button">
+                            📧 Enviar Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="inner">
+        <h2 class="section-title scroll-animate">Preguntas Frecuentes</h2>
+        <p class="section-subtitle scroll-animate">
+            Respuestas honestas a preguntas importantes
+        </p>
+
+        <div class="faq-container">
+            <details class="faq-item scroll-animate">
+                <summary class="faq-question">
+                    <h3>¿Cómo funciona la financiación AVGS?</h3>
+                    <span class="faq-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                    <p>AVGS (Cupón de Activación y Colocación) es emitido por la Agencia de Empleo Alemana o Centro de Empleo. Cubre el 100% de los costos de coaching de carrera. Le apoyamos con el proceso de solicitud y explicamos todos los requisitos.</p>
+                </div>
+            </details>
+
+            <details class="faq-item scroll-animate">
+                <summary class="faq-question">
+                    <h3>¿Están seguros mis datos durante las sesiones de coaching?</h3>
+                    <span class="faq-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                    <p>100% conforme a RGPD. Todas las conversaciones son confidenciales. Sus datos permanecen en Alemania en servidores seguros. Usted mantiene el control total - sin compartir datos sin su consentimiento explícito.</p>
+                </div>
+            </details>
+
+            <details class="faq-item scroll-animate">
+                <summary class="faq-question">
+                    <h3>¿Qué resultados puedo esperar del coaching?</h3>
+                    <span class="faq-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                    <p>Depende de su situación y compromiso. Algunos clientes encuentran claridad rápidamente, otros necesitan tiempo para la implementación. No podemos prometer milagros, pero le damos una evaluación honesta de lo que es realista para su situación específica.</p>
+                </div>
+            </details>
+
+            <details class="faq-item scroll-animate">
+                <summary class="faq-question">
+                    <h3>¿Solo trabaja con clientes alemanes?</h3>
+                    <span class="faq-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                    <p>La financiación AVGS y BAFA solo está disponible en Alemania. Sin embargo, ofrecemos coaching privado internacionalmente en alemán, inglés y español. Contáctenos para discutir sus necesidades específicas.</p>
+                </div>
+            </details>
+
+            <details class="faq-item scroll-animate">
+                <summary class="faq-question">
+                    <h3>¿Qué pasa después de la consulta inicial?</h3>
+                    <span class="faq-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                    <p>Recibe una evaluación realista de sus posibilidades y un plan honesto para los próximos pasos. Sin promesas exageradas, sino base sólida para sus decisiones. Juntos decidimos si y cómo proceder.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section footer-about">
+                <div class="footer-logo">
+                    <img src="../assets/images/KarriereLaborLogo.svg" alt="KarriereLabor" class="footer-logo-image" loading="lazy">
+                </div>
+                <div class="contact-profile">
+                    <div class="profile-image">
+                        <img src="../assets/images/coach-footer-portrait.jpg" alt="Dr. Luis Prill Sempere - KarriereLabor Coach" class="profile-photo" loading="lazy">
+                    </div>
+                    <div class="contact-info">
+                        <h4>Dr. Luis Prill Sempere</h4>
+                        <p class="contact-subtitle">KarriereLabor - Tu Laboratorio de Carrera</p>
+                        <p class="contact-title">Coaching de Carrera · Asesoría de Fundadores · AVGS & BAFA</p>
+                        <a href="https://www.linkedin.com/in/luis-prill-sempere/" target="_blank" rel="noopener" class="linkedin-contact">
+                            <span class="linkedin-icon">🔗</span>
+                            Perfil de LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="../impressum.html">Aviso Legal</a></li>
+                    <li><a href="../impressum.html#datenschutz">Política de Privacidad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-connect">
+                <h4>Idioma</h4>
+                <div class="footer-language">
+                    <div class="footer-language-switcher">
+                        <div class="footer-language-toggle">🇪🇸</div>
+                        <div class="footer-language-dropdown">
+                            <a href="../de/index.html" hreflang="de" lang="de">🇩🇪 Deutsch</a>
+                            <a href="../en/index.html" hreflang="en" lang="en">🇬🇧 English</a>
+                            <a href="./index.html" class="active" hreflang="es" lang="es">🇪🇸 Español</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 KarriereLabor - Dr. Luis Prill Sempere</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Dr. Prill Sempere Coaching",
+  "alternateName": "Coaching de Carrera y Asesoría de Fundadores",
+  "url": "https://bigbrainbusiness.de",
+  "logo": "https://bigbrainbusiness.de/assets/images/coach-portrait-luis-prill.jpg",
+  "image": "https://bigbrainbusiness.de/assets/images/coach-portrait-luis-prill.jpg",
+  "description": "Coaching profesional de carrera y asesoría de fundadores con más de 20 años de experiencia. Financiado por AVGS (gratis) y BAFA. Orientación profesional, preparación de entrevistas, estrategia de negocio.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "DE"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Dr. Luis Prill Sempere",
+    "jobTitle": "Business Coach y Asesor de Fundadores",
+    "description": "PhD Física, más de 20 años de experiencia como fundador desde 2002, experimentado en coaching financiado por AVGS/BAFA, certificado AVGS",
+    "sameAs": "https://www.linkedin.com/in/luis-prill-sempere/"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Alemania"
+  },
+  "serviceType": [
+    "Career Coaching",
+    "Coaching de Carrera",
+    "Orientación Profesional",
+    "Asesoría de Fundadores",
+    "Business Coaching",
+    "AVGS Coaching",
+    "BAFA Consultoría",
+    "Preparación de Entrevistas",
+    "Consultoría Startup",
+    "Personal Branding",
+    "Negociación Salarial"
+  ],
+  "priceRange": "€€€",
+  "telephone": "",
+  "email": "contact@bigbrainbusiness.de",
+  "sameAs": [
+    "https://www.linkedin.com/in/luis-prill-sempere/"
+  ],
+  "inLanguage": ["de", "en", "es"]
+}
+</script>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../assets/js/main.min.js" defer></script>
+
+</body>
+</html>

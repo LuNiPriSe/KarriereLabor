@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+    <title>KarriereLabor - Ihr Karriere-Labor | AVGS-gefördert & inklusiv</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="KarriereLabor - Ein sicherer Raum, um Ihre beruflichen Möglichkeiten zu erforschen. AVGS-gefördert (oft kostenlos). Karriere-Coaching, Bewerbungstraining, Gründerberatung. Für alle Bildungsniveaus zugänglich.">
+    <meta name="keywords" content="KarriereLabor, Karriere-Labor, Karriere-Coaching, AVGS, Jobcoaching, Bewerbungscoaching, Berufsorientierung, Gründerberatung, BAFA, Karriereberatung Deutschland, inklusives Coaching">
+    <meta name="author" content="KarriereLabor - Dr. Luis Prill Sempere">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bigbrainbusiness.de/de/index.html">
+
+    <!-- Alternate Language Links -->
+    <link rel="alternate" hreflang="de" href="https://bigbrainbusiness.de/de/index.html">
+    <link rel="alternate" hreflang="en" href="https://bigbrainbusiness.de/en/index.html">
+    <link rel="alternate" hreflang="es" href="https://bigbrainbusiness.de/es/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://bigbrainbusiness.de/de/index.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="KarriereLabor - Ihr Karriere-Labor | AVGS-gefördert">
+    <meta property="og:description" content="Entdecken Sie Ihre beruflichen Möglichkeiten im KarriereLabor. AVGS-gefördert (oft kostenlos). Ein sicherer Raum für Karriere-Entwicklung - inklusiv und strukturiert.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bigbrainbusiness.de/de/index.html">
+    <meta property="og:image" content="https://bigbrainbusiness.de/assets/images/KarriereLaborText.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:site_name" content="KarriereLabor">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KarriereLabor - Ihr Karriere-Labor">
+    <meta name="twitter:description" content="Ein sicherer Raum, um Ihre beruflichen Möglichkeiten zu erforschen. AVGS-gefördert. Inklusiv. Strukturiert.">
+    <meta name="twitter:image" content="https://bigbrainbusiness.de/assets/images/KarriereLaborText.png">
+
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+    <!-- Preload first 3 hero slides for instant rendering without flash -->
+    <link rel="preload" href="../assets/images/hero-1-career-discovery.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="../assets/images/hero-2-research-analyze.jpg" as="image">
+    <link rel="preload" href="../assets/images/hero-3-application-experiment.jpg" as="image">
+
+    <!-- CRITICAL CSS INLINE - Instant LCP rendering, zero blocking -->
+    <style>
+        /* Critical base styles for instant hero rendering */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #000;
+            color: #fff;
+        }
+
+        /* Critical hero gallery structure */
+        .hero-gallery-modern {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background: #1A1A1A;
+        }
+
+        .hero-slide {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Critical first 3 slide backgrounds - inline for instant rendering without flash */
+        .hero-slide-1 {
+            background: url('../assets/images/hero-1-career-discovery.jpg') center/cover no-repeat;
+            background-color: #FFFBF0; /* Fallback during load */
+        }
+        .hero-slide-2 {
+            background: url('../assets/images/hero-2-research-analyze.jpg') center/cover no-repeat;
+            background-color: #FFFBF0;
+        }
+        .hero-slide-3 {
+            background: url('../assets/images/hero-3-application-experiment.jpg') center/cover no-repeat;
+            background-color: #FFFBF0;
+        }
+        /* Slides 4-5 load from main CSS with fallback */
+        .hero-slide-4, .hero-slide-5 {
+            background-color: #FFFBF0;
+        }
+
+        /* Critical hero h1 - LCP element with full styling */
+        .slide-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 20;
+            max-width: min(85vw, 1100px);
+            width: 100%;
+            padding: 0 max(1rem, 3vw);
+        }
+
+        .slide-content h1 {
+            font-size: clamp(2.5rem, 6.5vw, 5.5rem);
+            font-weight: 700;
+            margin-bottom: clamp(1.75rem, 3.5vh, 2.75rem);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            color: #2C2C2C;
+            max-width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 0 2px 4px rgba(255,255,255,0.8), 0 4px 8px rgba(255,255,255,0.6);
+        }
+
+        .slide-subtitle {
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            line-height: 1.6;
+            color: rgba(44,44,44,0.85);
+            margin-bottom: 2rem;
+        }
+    </style>
+
+    <!-- Main CSS - NON-BLOCKING load after critical content renders -->
+    <link rel="stylesheet" href="../assets/css/styles-refined.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="../assets/css/styles-refined.css"></noscript>
+
+    <!-- Swiper CSS - non-blocking load -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+</head>
+<body>
+
+<!-- Floating Logo (Top Left) -->
+<div class="floating-logo">
+    <a href="#" class="logo-icon-link" aria-label="KarriereLabor - Ihr Karriere-Labor">
+        <img src="../assets/images/KarriereLaborLogo.svg" alt="KarriereLabor" class="logo-icon">
+        <img src="../assets/images/KarriereLaborText.svg" alt="KarriereLabor" class="logo-text">
+    </a>
+</div>
+
+<!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Modern Hero Gallery with Swiper -->
+<section class="hero-gallery-modern">
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <div class="language-toggle">🇩🇪</div>
+        <div class="language-dropdown">
+            <a href="./index.html" class="active" title="Deutsch" hreflang="de" lang="de">🇩🇪 Deutsch</a>
+            <a href="../en/index.html" title="English" hreflang="en" lang="en">🇬🇧 English</a>
+            <a href="../es/index.html" title="Español" hreflang="es" lang="es">🇪🇸 Español</a>
+        </div>
+    </div>
+
+    <div class="swiper hero-swiper" id="heroGallery">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide hero-slide hero-slide-1 active">
+                <div class="slide-content">
+                    <h1>Endlich wissen, wohin Ihr Weg führt</h1>
+                    <p class="slide-subtitle">Von Unsicherheit zu klaren Karrierezielen. Über 20 Jahre Gründer-Erfahrung für Ihren persönlichen Erfolg.</p>
+                    <div class="slide-actions">
+                        <a href="#booking" class="karriere-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Erstgespräch buchen
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide hero-slide hero-slide-2">
+                <div class="slide-content">
+                    <h1>Der Karrieresprung, den Sie verdienen</h1>
+                    <p class="slide-subtitle">Vom Stillstand zum beruflichen Aufstieg. AVGS-gefördert – für Sie kostenfrei mit Gutschein.</p>
+                    <div class="slide-actions">
+                        <a href="#services" class="liquid-button liquid-button-primary">Mehr über AVGS erfahren</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide hero-slide hero-slide-3">
+                <div class="slide-content">
+                    <h1>Vom Traum zum erfolgreichen Unternehmen</h1>
+                    <p class="slide-subtitle">Gründerberatung mit echter Praxiserfahrung statt Theorie. BAFA-gefördert – bis zu 80% Zuschuss.</p>
+                    <div class="slide-actions">
+                        <a href="#services" class="liquid-button liquid-button-primary">Gründercoaching entdecken</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide hero-slide hero-slide-4">
+                <div class="slide-content">
+                    <h1>Stark auftreten. Überzeugen. Gewinnen.</h1>
+                    <p class="slide-subtitle">Bewerbung, Gehaltsverhandlung, Pitch-Deck – Sie lernen, wie Sie souverän auftreten und erreichen, was Sie wollen.</p>
+                    <div class="slide-actions">
+                        <a href="#use-cases" class="liquid-button liquid-button-primary">Unsere Leistungen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide hero-slide hero-slide-5">
+                <div class="slide-content">
+                    <h1>Ihre Zukunft gestalten – kostenfrei</h1>
+                    <p class="slide-subtitle">AVGS für Karriere-Coaching, BAFA für Gründerberatung – professionelle Unterstützung ohne finanzielle Hürden.</p>
+                    <div class="slide-actions">
+                        <a href="#booking" class="liquid-button liquid-button-primary">Fördermöglichkeiten prüfen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Elements -->
+        <div class="swiper-pagination gallery-nav"></div>
+        <div class="gallery-navigation">
+            <button type="button" class="gallery-nav-btn gallery-prev" aria-label="Previous slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <button type="button" class="gallery-nav-btn gallery-next" aria-label="Next slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="comparison-section" id="services">
+    <div class="inner">
+        <h2 class="section-title scroll-animate">Ihre Coaching-Möglichkeiten</h2>
+        <p class="section-subtitle scroll-animate">
+            Professionelle Unterstützung für Karriere und Gründung – gefördert durch AVGS und BAFA
+        </p>
+
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-hybrid scroll-animate stagger-1">
+                <div class="comparison-icon">🧭</div>
+                <div class="comparison-image">
+                    <img src="../assets/images/coaching-perspektive.jpg" alt="Perspektivcoaching">
+                </div>
+                <h3>Perspektivcoaching</h3>
+                <p><strong>Ihr Potential entdecken & entwickeln</strong></p>
+                <ul>
+                    <li>Ikigai-Analyse: Finden Sie Ihren Lebenszweck</li>
+                    <li>Stärken & Talente identifizieren</li>
+                    <li>Bedürfnisse & Wünsche klären</li>
+                    <li>Lebensbalance & Zufriedenheit</li>
+                    <li>Persönliche Entwicklungsrichtung</li>
+                </ul>
+            </div>
+
+            <div class="comparison-card comparison-hybrid scroll-animate stagger-2">
+                <div class="comparison-icon">💼</div>
+                <div class="comparison-image">
+                    <img src="../assets/images/coaching-karriere.jpg" alt="Karriere-Coaching">
+                </div>
+                <h3>Karriere-Coaching</h3>
+                <p><strong>Berufliche Entwicklung & Neuorientierung</strong></p>
+                <ul>
+                    <li>Berufliche Neuorientierung</li>
+                    <li>Bewerbungstraining & Interview-Vorbereitung</li>
+                    <li>Personal Branding & LinkedIn</li>
+                    <li>Gehaltsverhandlung</li>
+                    <li>💰 <strong>AVGS-Förderung: Wir unterstützen Sie bei der Beantragung</strong></li>
+                </ul>
+            </div>
+
+            <div class="comparison-card comparison-hybrid scroll-animate stagger-3">
+                <div class="comparison-icon">🚀</div>
+                <div class="comparison-image">
+                    <img src="../assets/images/coaching-gruender.jpg" alt="Gründerberatung">
+                </div>
+                <h3>Gründerberatung</h3>
+                <p><strong>Von der Idee zum erfolgreichen Business</strong></p>
+                <ul>
+                    <li>Business-Model-Entwicklung</li>
+                    <li>Pitch-Deck-Erstellung</li>
+                    <li>Strategie & Roadmap</li>
+                    <li>Gründungsfinanzierung & Fördermittel</li>
+                    <li>💰 <strong>BAFA-Förderung: Wir unterstützen Sie bei der Beantragung</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="methodology-meta scroll-animate">
+            <p class="methodology-intro">
+                ✨ Über 20 Jahre Gründer-Erfahrung: Seit 2002 als Unternehmer aktiv, erfahren in AVGS- und BAFA-gefördertem Coaching. Praktische Erfahrung für Ihren Erfolg.
+            </p>
+            <div class="xray-wrapper">
+                <div class="xray-toggle">
+                    Was Sie erwartet
+                </div>
+                <div class="xray-content">
+                    <div class="xray-grid">
+                        <div class="xray-column">
+                            <h4>Meine Expertise</h4>
+                            <ul>
+                                <li>✅ 20+ Jahre Gründer-Erfahrung (seit 2002)</li>
+                                <li>✅ Zahlreiche erfolgreiche AVGS/BAFA-Coachings</li>
+                                <li>✅ AVGS-zertifiziert (Agentur für Arbeit)</li>
+                                <li>✅ BAFA-Erfahrung (Gründerförderung)</li>
+                                <li>✅ Mehrsprachig: DE / EN / ES</li>
+                            </ul>
+                        </div>
+                        <div class="xray-column">
+                            <h4>Coaching-Methodik</h4>
+                            <ul>
+                                <li>✅ Systematischer 3-Phasen-Ansatz</li>
+                                <li>✅ Individuelle Zieldefinition</li>
+                                <li>✅ Praxisnahe Strategien</li>
+                                <li>✅ Regelmäßige Erfolgskontrolle</li>
+                                <li>✅ Flexible Termingestaltung</li>
+                            </ul>
+                        </div>
+                        <div class="xray-column">
+                            <h4>Förderung & Preise</h4>
+                            <ul>
+                                <li>✅ AVGS-Förderung: 100% kostendeckung</li>
+                                <li>✅ BAFA-Förderung: bis 80% Zuschuss</li>
+                                <li>✅ Privat: €80-150 pro Sitzung</li>
+                                <li>✅ Kostenlose Erstberatung (15 Min.)</li>
+                                <li>✅ Unterstützung bei Antragstellung</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Methodology Section -->
+<section class="services-section" id="methodology">
+    <div class="inner">
+        <h2 class="section-title scroll-animate">Meine Coaching-Methodik</h2>
+        <p class="section-subtitle scroll-animate">
+            Systematischer 3-Phasen-Ansatz für Ihren nachhaltigen Erfolg
+        </p>
+        <div class="services-grid">
+            <div class="service-card scroll-animate stagger-1">
+                <div class="service-icon">🔍</div>
+                <h3>1. Entdecken</h3>
+                <p><strong>Standortbestimmung &amp; Zieldefinition</strong></p>
+                <ul>
+                    <li>Analyse Ihrer aktuellen Situation</li>
+                    <li>Klärung Ihrer Ziele und Wünsche</li>
+                    <li>Identifikation von Stärken &amp; Potentialen</li>
+                    <li>Erkennung von Hindernissen</li>
+                    <li>Realistische Erwartungshaltung setzen</li>
+                </ul>
+                <a href="#booking" class="service-cta">Erstgespräch vereinbaren</a>
+            </div>
+            <div class="service-card scroll-animate stagger-2">
+                <div class="service-icon">🗺️</div>
+                <h3>2. Strategie entwickeln</h3>
+                <p><strong>Planung → Roadmap → Umsetzungsplan</strong></p>
+                <ul>
+                    <li>Strategische Planung Ihrer nächsten Schritte</li>
+                    <li>Entwicklung konkreter Handlungsoptionen</li>
+                    <li>Erstellung Ihrer persönlichen Roadmap</li>
+                    <li>Vorbereitung auf Herausforderungen</li>
+                    <li>Definition messbarer Meilensteine</li>
+                </ul>
+                <a href="#booking" class="service-cta">Strategie-Session buchen</a>
+            </div>
+            <div class="service-card scroll-animate stagger-3">
+                <div class="service-icon">⚡</div>
+                <h3>3. Umsetzen &amp; Erreichen</h3>
+                <p><strong>Aktion → Begleitung → Erfolg</strong></p>
+                <ul>
+                    <li>Umsetzung Ihrer Strategie mit Begleitung</li>
+                    <li>Regelmäßige Erfolgskontrolle</li>
+                    <li>Anpassung bei Bedarf (agil)</li>
+                    <li>Motivation &amp; Accountability</li>
+                    <li>Nachhaltige Verankerung des Erfolgs</li>
+                </ul>
+                <a href="#booking" class="service-cta">Begleitung starten</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Use Cases Section -->
+<section class="use-cases-section" id="use-cases">
+    <div class="inner">
+        <h2 class="section-title scroll-animate">Unsere Coaching-Leistungen</h2>
+        <p class="section-subtitle scroll-animate">
+            Praktische Unterstützung für Ihre berufliche Entwicklung
+        </p>
+
+        <div class="use-cases-interactive">
+            <!-- Left Menu -->
+            <div class="use-case-menu">
+                <div class="use-case-tab active" data-case="job-finding">
+                    <div class="tab-icon">🔍</div>
+                    <span>Jobsuche</span>
+                </div>
+                <div class="use-case-tab" data-case="interview-prep">
+                    <div class="tab-icon">💼</div>
+                    <span>Bewerbungstraining</span>
+                </div>
+                <div class="use-case-tab" data-case="founder-consulting">
+                    <div class="tab-icon">🚀</div>
+                    <span>Gründerberatung</span>
+                </div>
+                <div class="use-case-tab" data-case="perspective-coaching">
+                    <div class="tab-icon">🎯</div>
+                    <span>Perspektivcoaching</span>
+                </div>
+            </div>
+
+            <!-- Center Image -->
+            <div class="use-case-visualization">
+                <div class="use-case-image active" data-case="job-finding">
+                    <img src="../assets/images/use-case-job-finding.jpg" alt="Jobsuche Coaching" loading="lazy">
+                </div>
+                <div class="use-case-image" data-case="interview-prep">
+                    <img src="../assets/images/use-case-interview-prep.jpg" alt="Bewerbungstraining" loading="lazy">
+                </div>
+                <div class="use-case-image" data-case="founder-consulting">
+                    <img src="../assets/images/use-case-founder-consulting.jpg" alt="Gründerberatung" loading="lazy">
+                </div>
+                <div class="use-case-image" data-case="perspective-coaching">
+                    <img src="../assets/images/use-case-perspective-coaching.jpg" alt="Perspektivcoaching" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Right Description -->
+            <div class="use-case-details">
+                <div class="use-case-content active" data-case="job-finding">
+                    <h3>Jobsuche: Den richtigen Job finden</h3>
+                    <p><strong>Ihre Situation:</strong> Sie suchen aktiv nach einer neuen Anstellung und möchten Ihre Jobsuche professionell gestalten. Wo finde ich passende Stellenangebote? Wie bewerbe ich mich erfolgreich? <strong>Unser Ansatz:</strong> Wir entwickeln gemeinsam eine effektive Suchstrategie, optimieren Ihre Bewerbungsunterlagen und bereiten Sie optimal auf den Bewerbungsprozess vor. Mit AVGS-Förderung 100% kostenfrei.</p>
+                    <div class="use-case-metrics">
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">✅ AVGS-gefördert</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Förderung:</strong> Aktivierungs- und Vermittlungsgutschein</p>
+                                <p>100% Kostendeckung durch die Agentur für Arbeit oder Jobcenter. Wir unterstützen Sie bei der Beantragung. <a href="https://www.arbeitsagentur.de/karriere-und-weiterbildung/foerderung-berufliche-weiterbildung" target="_blank" rel="noopener">Mehr zur AVGS-Förderung</a></p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🎯 Suchstrategie</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Systematisch:</strong> Effektive Jobsuche</p>
+                                <p>Wir entwickeln Ihre persönliche Strategie für eine erfolgreiche Jobsuche.</p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">💼 Bewerbungsoptimierung</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Professionell:</strong> Überzeugende Unterlagen</p>
+                                <p>Lebenslauf und Anschreiben, die Personalern auffallen.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="use-case-content" data-case="interview-prep">
+                    <h3>Bewerbungstraining: Überzeugen im Vorstellungsgespräch</h3>
+                    <p><strong>Ihre Situation:</strong> Sie haben Einladungen zu Vorstellungsgesprächen, sind aber unsicher oder wurden bereits mehrfach abgelehnt. Wie beantworte ich schwierige Fragen? Wie verhandle ich mein Gehalt? <strong>Unser Ansatz:</strong> Wir optimieren Ihre Bewerbungsunterlagen, üben realistische Interviewsituationen mit Rollenspielen und stärken Ihr Selbstbewusstsein. Sie lernen, authentisch und überzeugend aufzutreten.</p>
+                    <div class="use-case-metrics">
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🎭 Rollenspiele</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Praxis:</strong> Realitätsnahe Simulation</p>
+                                <p>Wir üben echte Interviewsituationen – mit konstruktivem Feedback.</p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">📄 Unterlagen-Check</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Optimierung:</strong> Lebenslauf &amp; Anschreiben</p>
+                                <p>Professionelle Überarbeitung Ihrer Bewerbungsunterlagen für maximale Wirkung. <a href="https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/bewerbung" target="_blank" rel="noopener">Bewerbungstipps</a></p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">💪 Selbstbewusstsein</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Mindset:</strong> Souverän auftreten</p>
+                                <p>Wir stärken Ihre innere Sicherheit für einen überzeugenden Auftritt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-case-content" data-case="founder-consulting">
+                    <h3>Gründerberatung: Vorbereitung auf Gründerzuschuss</h3>
+                    <p><strong>Ihre Situation:</strong> Sie möchten sich selbstständig machen und benötigen Unterstützung bei der Beantragung des Gründerzuschusses von der Agentur für Arbeit oder dem Jobcenter. Wie bereite ich mich optimal vor? Was muss in den Businessplan? <strong>Unser Ansatz:</strong> Mit über 20 Jahren Gründer-Erfahrung bereiten wir Sie gezielt auf die Gründerzuschuss-Beantragung vor. Wir entwickeln gemeinsam Ihren Businessplan, erstellen Finanzplanung und bereiten Sie auf das Gespräch mit der Agentur für Arbeit vor.</p>
+                    <div class="use-case-metrics">
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">💰 Gründerzuschuss</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Förderung:</strong> Agentur für Arbeit / Jobcenter</p>
+                                <p>Finanzielle Unterstützung für Ihre Gründung. Wir bereiten Sie optimal auf die Beantragung vor. <a href="https://www.arbeitsagentur.de/existenzgruendung/gruendungszuschuss" target="_blank" rel="noopener">Mehr zum Gründerzuschuss</a></p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">📋 Businessplan</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Professionell:</strong> Überzeugende Planung</p>
+                                <p>Wir entwickeln gemeinsam Ihren Businessplan für die Bewilligung.</p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🚀 20+ Jahre Praxis seit 2002</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Erfahrung:</strong> Erfolgreiche Gründungen</p>
+                                <p>Ich habe selbst mehrere Unternehmen gegründet und kenne den Prozess aus eigener Erfahrung.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-case-content" data-case="perspective-coaching">
+                    <h3>Perspektivcoaching: Klarheit über Ihre berufliche Zukunft</h3>
+                    <p><strong>Ihre Situation:</strong> Sie stehen an einem beruflichen Wendepunkt und wissen nicht genau, wohin die Reise gehen soll. Was sind Ihre wahren Stärken? Welche Ziele passen zu Ihrer Persönlichkeit? <strong>Unser Ansatz:</strong> Mit Ikigai-Analyse, Persönlichkeitstyp-Bestimmung und strukturierter Selbstreflexion entwickeln wir gemeinsam Klarheit über Ihre berufliche Zukunft. Sie finden heraus, wo Sie stehen, wohin Sie wollen und wie Sie dorthin kommen.</p>
+                    <div class="use-case-metrics">
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🎯 Ikigai-Analyse</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Methode:</strong> Japanische Lebenssinn-Philosophie</p>
+                                <p>Wir finden gemeinsam Ihre perfekte Überschneidung aus Leidenschaft, Talent, Weltbedarf und Bezahlung. <a href="https://de.wikipedia.org/wiki/Ikigai" target="_blank" rel="noopener">Mehr zu Ikigai</a></p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🧠 Persönlichkeitstyp</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Selbsterkenntnis:</strong> Ihre einzigartigen Stärken</p>
+                                <p>Wir analysieren Ihren Persönlichkeitstyp und leiten daraus berufliche Perspektiven ab.</p>
+                            </div>
+                        </div>
+                        <div class="metric-wrapper">
+                            <span class="metric-bubble">🚀 Zieldefinition</span>
+                            <div class="metric-tooltip">
+                                <p><strong>Konkret:</strong> Vom Traum zum Plan</p>
+                                <p>Wir entwickeln klare, erreichbare Ziele und einen realistischen Umsetzungsplan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Visual Methodology Flow Section (duplicate removed - see methodology section above) -->
+<!-- Booking Section with Coach Profile -->
+<section class="booking-section" id="booking">
+    <div class="inner">
+        <h2 class="section-title scroll-animate">Kostenloses Erstgespräch vereinbaren</h2>
+
+        <div class="booking-grid">
+            <div class="booking-profile-card scroll-animate">
+                <div class="profile-card-inner">
+                    <div class="profile-card-content">
+                        <h3>Dr. Luis Prill Sempere</h3>
+                        <p class="founder-role">Business Coach &amp; Gründerberater</p>
+                        <p class="founder-subtitle">PhD Physics · 20+ Jahre Gründer-Erfahrung seit 2002</p>
+
+                        <div class="founder-credentials">
+                            <p>🚀 20+ Jahre Gründer-Erfahrung & AVGS/BAFA-Coaching</p>
+                            <p>✅ AVGS-zertifiziert • BAFA-Erfahrung</p>
+                            <p>🌍 Mehrsprachig: Deutsch, English, Español</p>
+                            <p>💼 Karriere-Coaching &amp; Gründerberatung mit Praxiserfahrung</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-content scroll-animate">
+                <h2>Lassen Sie uns über Ihre Ziele sprechen</h2>
+
+                <div class="booking-note scroll-animate" style="margin-top: var(--space-lg); margin-bottom: var(--space-xl); padding: var(--space-xl); background: linear-gradient(135deg, rgba(232, 244, 253, 0.95), rgba(255, 244, 237, 0.95)); border-left: 4px solid var(--light-orange); border-radius: var(--radius-md); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                    <h4 style="color: var(--dark-blue); font-size: 1.1rem; margin-bottom: var(--space-md); font-weight: 700;">💰 Förderung & Finanzierung</h4>
+                    <p style="color: var(--deep-charcoal); font-size: 0.95rem; line-height: 1.7; margin-bottom: var(--space-md); font-weight: 500;">💼 <strong>AVGS</strong> (Aktivierungs- und Vermittlungsgutschein): Karriere-Coaching kann für Sie 100% kostenfrei sein! Wir unterstützen Sie aktiv bei der Beantragung bei Ihrer Agentur für Arbeit oder Ihrem Jobcenter.</p>
+                    <p style="color: var(--deep-charcoal); font-size: 0.95rem; line-height: 1.7; margin-bottom: var(--space-md); font-weight: 500;">🚀 <strong>BAFA-Förderung</strong>: Gründerberatung wird mit bis zu 80% bezuschusst! Wir helfen Ihnen bei der Beantragung der BAFA-Förderung für Gründungsberatung.</p>
+                    <p style="color: var(--medium-gray); font-size: 0.85rem; line-height: 1.6; margin: 0; font-style: italic;">ℹ️ Wir sind AVGS-zertifiziert und BAFA-erfahren. Wir unterstützen jeden bei der Beantragung von Fördermitteln, können jedoch keine Bewilligung garantieren. Die finale Entscheidung liegt bei der zuständigen Behörde.</p>
+                </div>
+
+                <div class="booking-widget">
+                    <div class="booking-fallback">
+                        <a href="https://cal.com/luniprise/15min" class="liquid-button liquid-button-primary" target="_blank" rel="noopener">
+                            📅 15-Min Erstgespräch (kostenfrei)
+                        </a>
+                        <a href="https://cal.com/luniprise/30min" class="liquid-button liquid-button-primary" target="_blank" rel="noopener">
+                            📅 30-Min Beratung buchen
+                        </a>
+                        <a href="mailto:contact@bigbrainbusiness.de" class="liquid-button liquid-button-primary">
+                            📧 E-Mail senden
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="inner">
+        <h2 class="section-title scroll-animate">Häufig gestellte Fragen</h2>
+        <p class="section-subtitle scroll-animate">
+            Ehrliche Antworten auf wichtige Fragen
+        </p>
+
+        <div class="faq-container">
+            <details class="faq-item scroll-animate">
+                <summary class="faq-question">
+                    <h3>Wie funktioniert die AVGS-Förderung?</h3>
+                    <span class="faq-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                    <p>AVGS (Aktivierungs- und Vermittlungsgutschein) wird von der Agentur für Arbeit oder dem Jobcenter ausgestellt. Er deckt 100% der Karriere-Coaching-Kosten ab. Wir unterstützen Sie bei der Beantragung und erklären alle Voraussetzungen. <a href="https://www.arbeitsagentur.de/karriere-und-weiterbildung/foerderung-berufliche-weiterbildung" target="_blank" rel="noopener">Mehr Infos zur AVGS-Förderung</a></p>
+                </div>
+            </details>
+
+            <details class="faq-item scroll-animate">
+                <summary class="faq-question">
+                    <h3>Sind meine Daten während der Coaching-Sitzungen sicher?</h3>
+                    <span class="faq-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                    <p>100% DSGVO-konform. Alle Gespräche sind vertraulich. Ihre Daten bleiben in Deutschland auf sicheren Servern. Sie behalten die volle Kontrolle - keine Datenweitergabe ohne Ihre explizite Zustimmung.</p>
+                </div>
+            </details>
+
+            <details class="faq-item scroll-animate">
+                <summary class="faq-question">
+                    <h3>Welche Ergebnisse kann ich vom Coaching erwarten?</h3>
+                    <span class="faq-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                    <p>Das hängt von Ihrer Situation und Ihrem Engagement ab. Manche Klienten finden schnell Klarheit, andere brauchen Zeit für die Umsetzung. Wir können keine Wunder versprechen, aber wir geben Ihnen eine ehrliche Einschätzung, was für Ihre spezifische Situation realistisch ist.</p>
+                </div>
+            </details>
+
+            <details class="faq-item scroll-animate">
+                <summary class="faq-question">
+                    <h3>Arbeiten Sie nur mit deutschen Klienten?</h3>
+                    <span class="faq-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                    <p>AVGS- und BAFA-Förderung gibt es nur in Deutschland. Wir bieten jedoch auch Privat-Coaching international auf Deutsch, Englisch und Spanisch an. Kontaktieren Sie uns, um Ihre spezifischen Bedürfnisse zu besprechen.</p>
+                </div>
+            </details>
+
+            <details class="faq-item scroll-animate">
+                <summary class="faq-question">
+                    <h3>Was passiert nach dem Erstgespräch?</h3>
+                    <span class="faq-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                    <p><strong>Unser strukturierter Prozess:</strong></p>
+                    <ol style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li><strong>Erstgespräch (15-30 Min., kostenfrei)</strong>: Wir lernen uns kennen, besprechen Ihre Situation und Ziele</li>
+                        <li><strong>Angebot & Coaching-Plan</strong>: Sie erhalten ein detailliertes Angebot mit Umfang, Dauer und Kosten</li>
+                        <li><strong>Förderungsunterstützung</strong>: Wenn gewünscht, unterstützen wir Sie aktiv bei der Beantragung von AVGS (Agentur für Arbeit/Jobcenter) oder BAFA-Förderung (BAFA)</li>
+                        <li><strong>Bewilligung abwarten</strong>: Nach Antragstellung dauert die Bewilligung in der Regel 1-3 Wochen</li>
+                        <li><strong>Coaching startet</strong>: Wir treffen uns regelmäßig (typisch 1-2x pro Woche), um gemeinsam an Ihrer individuellen Strategie zu arbeiten</li>
+                        <li><strong>Kontinuierliche Begleitung</strong>: Flexible Anpassung des Plans je nach Fortschritt und neuen Erkenntnissen</li>
+                    </ol>
+                    <p style="margin-top: 1rem;"><em>Sie entscheiden in jedem Schritt, ob und wie wir weitermachen. Keine versteckten Kosten, keine Verpflichtungen.</em></p>
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section footer-about">
+                <div class="footer-logo">
+                    <img src="../assets/images/KarriereLaborLogo.svg" alt="KarriereLabor" class="footer-logo-image" loading="lazy">
+                </div>
+                <div class="contact-profile">
+                    <div class="profile-image">
+                        <img src="../assets/images/coach-footer-portrait.jpg" alt="Dr. Luis Prill Sempere - KarriereLabor Coach" class="profile-photo" loading="lazy">
+                    </div>
+                    <div class="contact-info">
+                        <h4>Dr. Luis Prill Sempere</h4>
+                        <p class="contact-subtitle">KarriereLabor - Ihr Karriere-Labor</p>
+                        <p class="contact-title">Karriere-Coaching · Gründerberatung · AVGS & BAFA</p>
+                        <a href="https://www.linkedin.com/in/luis-prill-sempere/" target="_blank" rel="noopener" class="linkedin-contact">
+                            <span class="linkedin-icon">🔗</span>
+                            LinkedIn Profil
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Rechtliches</h4>
+                <ul>
+                    <li><a href="../impressum.html">Impressum</a></li>
+                    <li><a href="../impressum.html#datenschutz">Datenschutz</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-connect">
+                <h4>Sprache</h4>
+                <div class="footer-language">
+                    <div class="footer-language-switcher">
+                        <div class="footer-language-toggle">🇩🇪</div>
+                        <div class="footer-language-dropdown">
+                            <a href="../index.html" class="active" hreflang="de" lang="de">🇩🇪 Deutsch</a>
+                            <a href="../en/index.html" hreflang="en" lang="en">🇬🇧 English</a>
+                            <a href="../es/index.html" hreflang="es" lang="es">🇪🇸 Español</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 KarriereLabor - Dr. Luis Prill Sempere</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Dr. Prill Sempere Coaching",
+  "alternateName": "Karriere-Coaching & Gründerberatung",
+  "url": "https://bigbrainbusiness.de",
+  "logo": "https://bigbrainbusiness.de/assets/images/coach-portrait-luis-prill.jpg",
+  "image": "https://bigbrainbusiness.de/assets/images/coach-portrait-luis-prill.jpg",
+  "description": "Professionelles Karriere-Coaching und Gründerberatung mit über 20 Jahren Erfahrung. AVGS-gefördert (kostenlos) und BAFA-Förderung. Perspektivcoaching, Bewerbungstraining, Business-Strategie.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "DE"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Dr. Luis Prill Sempere",
+    "jobTitle": "Business Coach & Gründerberater",
+    "description": "PhD Physics, 20+ Jahre Gründer-Erfahrung seit 2002, erfahren in AVGS/BAFA-gefördertem Coaching, AVGS-zertifiziert",
+    "sameAs": "https://www.linkedin.com/in/luis-prill-sempere/"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Deutschland"
+  },
+  "serviceType": [
+    "Career Coaching",
+    "Karriere-Coaching",
+    "Perspektivcoaching",
+    "Gründerberatung",
+    "Business Coaching",
+    "AVGS Coaching",
+    "BAFA Beratung",
+    "Digitalisierung",
+    "Prozessautomatisierung",
+    "Startup-Beratung",
+    "AI Integration"
+  ],
+  "priceRange": "€€€",
+  "telephone": "",
+  "email": "contact@bigbrainbusiness.de",
+  "sameAs": [
+    "https://www.linkedin.com/in/luis-prill-sempere/"
+  ],
+  "inLanguage": ["de", "en", "es"]
+}
+</script>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../assets/js/main.min.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+name: Deploy to Surfer
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Setup Node.js (if needed for build process)
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+      continue-on-error: true
+
+    - name: Install dependencies (if package.json exists)
+      run: |
+        if [ -f package.json ]; then
+          npm ci
+        else
+          echo "No package.json found, skipping npm install"
+        fi
+
+    - name: Build site (if build script exists)
+      run: |
+        if [ -f package.json ] && npm run build --if-present; then
+          echo "Build completed"
+        else
+          echo "No build process needed for static site"
+        fi
+
+    - name: Prepare deployment files
+      run: |
+        # Create a deployment directory
+        mkdir -p deploy
+
+        # Copy all files except .git, .github, node_modules, and other dev files
+        rsync -av --exclude='.git' \
+                  --exclude='.github' \
+                  --exclude='node_modules' \
+                  --exclude='.DS_Store' \
+                  --exclude='*.log' \
+                  --exclude='DEPLOYMENT.md' \
+                  ./ deploy/
+
+    - name: Deploy to Surfer
+      env:
+        SURFER_URL: ${{ secrets.SURFER_URL }}
+        SURFER_TOKEN: ${{ secrets.SURFER_TOKEN }}
+        SURFER_DOMAIN: ${{ secrets.SURFER_DOMAIN }}
+      run: |
+        # Install surfer CLI if not available
+        if ! command -v surfer &> /dev/null; then
+          echo "Installing Surfer CLI..."
+          curl -sSL https://install.surfer.io | sh
+          export PATH="$HOME/.surfer/bin:$PATH"
+        fi
+
+        cd deploy
+
+        # Deploy using surfer CLI
+        surfer deploy \
+          --url "${SURFER_URL}" \
+          --token "${SURFER_TOKEN}" \
+          --domain "${SURFER_DOMAIN}" \
+          --directory .
+
+    - name: Deployment Summary
+      run: |
+        echo "🚀 Deployment completed successfully!"
+        echo "📅 Deployed at: $(date)"
+        echo "🔗 Site URL: https://${SURFER_DOMAIN}"
+        echo "📦 Deployed from commit: ${{ github.sha }}"

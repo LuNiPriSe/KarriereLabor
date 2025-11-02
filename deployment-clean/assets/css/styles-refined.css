@@ -1327,15 +1327,15 @@ body {
     background: rgba(255, 255, 255, 1);
 }
 
-/* White info box with black border */
+/* White info box - border only visible when open */
 .metric-tooltip {
     max-height: 0;
     overflow: hidden;
     background: #FFFFFF;
-    border: 2px solid #000000;
+    border: 2px solid transparent;
     border-radius: var(--radius-md);
-    margin-top: var(--space-xs);
-    transition: max-height 0.4s ease, padding 0.4s ease, margin-top 0.4s ease;
+    margin-top: 0;
+    transition: max-height 0.4s ease, padding 0.4s ease, margin-top 0.4s ease, border-color 0.4s ease;
     padding: 0 var(--space-md);
 }
 
@@ -1343,6 +1343,7 @@ body {
     max-height: 300px;
     padding: var(--space-md);
     margin-top: var(--space-sm);
+    border-color: #000000;
 }
 
 .metric-tooltip p {
@@ -2309,13 +2310,10 @@ img {
     border-radius: var(--radius-xl);
     padding: var(--space-2xl);
     box-shadow: var(--shadow-glass);
-    transition: all 0.3s ease;
 }
 
 .booking-widget:hover {
-    background: var(--glass-hover);
-    border-color: var(--soft-gold);
-    transform: translateY(-5px);
+    /* Removed excessive animations per user request */
 }
 
 .booking-fallback {
@@ -2807,7 +2805,7 @@ body.slide-transition {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: var(--space-md);
-    background: linear-gradient(135deg, var(--karriere-gold), var(--karriere-red));
+    background: linear-gradient(135deg, var(--karriere-red), var(--karriere-gold));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -3001,15 +2999,16 @@ body.slide-transition {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: 3px solid var(--karriere-gold);
+    border: 3px solid var(--karriere-red);
     object-fit: cover;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .footer-profile .profile-photo:hover {
     transform: scale(1.05);
-    border-color: var(--karriere-red);
-    box-shadow: 0 0 15px rgba(254, 204, 2, 0.3);
+    border-color: var(--karriere-gold);
+    box-shadow: 0 0 15px rgba(254, 204, 2, 0.4);
 }
 
 .profile-info {

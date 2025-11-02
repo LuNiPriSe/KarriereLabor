@@ -72,6 +72,17 @@
             color: #fff;
         }
 
+        /* HIDE BODY UNTIL CSS LOADS - Prevents flicker/FOUC */
+        body {
+            opacity: 0;
+        }
+
+        /* Show body after CSS loads */
+        html.loaded body {
+            opacity: 1;
+            transition: opacity 0.2s ease-in;
+        }
+
         /* Critical hero gallery structure */
         .hero-gallery-modern {
             position: relative;
@@ -144,13 +155,11 @@
         }
     </style>
 
-    <!-- Main CSS - NON-BLOCKING load after critical content renders -->
-    <link rel="stylesheet" href="../assets/css/styles-refined.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="../assets/css/styles-refined.css"></noscript>
+    <!-- Main CSS - BLOCKING load to prevent FOUC -->
+    <link rel="stylesheet" href="../assets/css/styles-refined.css">
 
-    <!-- Swiper CSS - non-blocking load -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+    <!-- Swiper CSS - BLOCKING load to prevent FOUC -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
 
@@ -823,14 +832,11 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../assets/js/main.min.js" defer></script>
 
-<!-- Remove preload class after page fully loads - Enables smooth animations -->
+<!-- Enable animations and show body after page loads -->
 <script>
-    window.addEventListener('load', function() {
-        // Small delay to ensure CSS is parsed
-        setTimeout(function() {
-            document.documentElement.classList.remove('preload');
-        }, 100);
-    });
+    // Remove preload class immediately - CSS is already loaded (blocking)
+    document.documentElement.classList.remove('preload');
+    document.documentElement.classList.add('loaded');
 </script>
 
 </body>

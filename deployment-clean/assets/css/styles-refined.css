@@ -1296,7 +1296,7 @@ body {
     display: inline-block;
 }
 
-/* Main green bubble - compact and centered */
+/* RED bubble for collapsed state */
 .use-case-metrics .metric-bubble {
     position: relative;
     display: inline-flex;
@@ -1304,32 +1304,35 @@ body {
     justify-content: center;
     text-align: center;
     background: rgba(255, 255, 255, 0.95);
-    border: 2px solid var(--professional-blue);
+    border: 2px solid var(--karriere-red);
     border-radius: var(--radius-full);
     padding: var(--space-xs) var(--space-md);
-    color: var(--deep-blue);
+    color: var(--karriere-red);
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
     min-width: 280px;
     min-height: 44px;
     white-space: nowrap;
     text-align: center;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 8px rgba(46, 92, 138, 0.2);
+    box-shadow: 0 2px 8px rgba(255, 3, 3, 0.2);
 }
 
 .metric-wrapper:hover .metric-bubble,
 .metric-wrapper.active .metric-bubble {
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
-    border-color: rgba(16, 185, 129, 0.6);
+    box-shadow: 0 6px 20px rgba(254, 204, 2, 0.4);
+    border-color: var(--karriere-gold);
+    color: var(--karriere-gold);
+    background: rgba(255, 255, 255, 1);
 }
 
-/* Accordion-style tooltip (expands below, no overlay) */
+/* White info box with black border */
 .metric-tooltip {
     max-height: 0;
     overflow: hidden;
-    background: rgba(245, 241, 232, 0.95);
+    background: #FFFFFF;
+    border: 2px solid #000000;
     border-radius: var(--radius-md);
     margin-top: var(--space-xs);
     transition: max-height 0.4s ease, padding 0.4s ease, margin-top 0.4s ease;
@@ -1343,9 +1346,9 @@ body {
 }
 
 .metric-tooltip p {
-    color: var(--deep-charcoal);
-    font-size: 0.85rem;
-    line-height: 1.5;
+    color: var(--pure-black);
+    font-size: 0.9rem;
+    line-height: 1.6;
     margin-bottom: var(--space-sm);
 }
 
@@ -1354,22 +1357,23 @@ body {
 }
 
 .metric-tooltip strong {
-    color: var(--soft-gold);
-    font-weight: 600;
+    color: var(--karriere-red);
+    font-weight: 700;
 }
 
 .metric-tooltip a {
     display: inline-flex;
     align-items: center;
-    color: var(--terracotta);
+    color: var(--karriere-gold);
     text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 0.9rem;
     transition: all 0.2s ease;
 }
 
 .metric-tooltip a:hover {
-    color: var(--soft-gold);
+    color: #FFD700;
+    text-decoration: underline;
     transform: translateX(4px);
 }
 

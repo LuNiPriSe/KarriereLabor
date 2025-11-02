@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="es" class="dark preload">
 <head>
     <title>Dr. Prill Sempere - Coaching de Carrera y Asesoría de Fundadores | AVGS & BAFA</title>
     <meta charset="utf-8">
@@ -53,6 +53,14 @@
 
     <!-- CRITICAL CSS INLINE - Instant LCP rendering, zero blocking -->
     <style>
+        /* DISABLE ALL ANIMATIONS DURING PAGE LOAD - Prevents FOUC */
+        html.preload * {
+            animation-duration: 0s !important;
+            animation-delay: 0s !important;
+            transition-duration: 0s !important;
+            transition-delay: 0s !important;
+        }
+
         /* Critical base styles for instant hero rendering */
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -874,6 +882,16 @@
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../assets/js/main.min.js" defer></script>
+
+<!-- Remove preload class after page fully loads - Enables smooth animations -->
+<script>
+    window.addEventListener('load', function() {
+        // Small delay to ensure CSS is parsed
+        setTimeout(function() {
+            document.documentElement.classList.remove('preload');
+        }, 100);
+    });
+</script>
 
 </body>
 </html>

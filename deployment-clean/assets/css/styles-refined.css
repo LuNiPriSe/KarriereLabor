@@ -1291,18 +1291,18 @@ body {
     display: inline-block;
 }
 
-/* RED bubble for collapsed state */
+/* Accordion badges - Black → Red → Yellow */
 .use-case-metrics .metric-bubble {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(255, 255, 255, 0.95);
-    border: 2px solid var(--karriere-red);
+    background: linear-gradient(145deg, #ffffff 0%, #f5f5f5 100%);
+    border: 2px solid var(--pure-black);
     border-radius: var(--radius-full);
     padding: var(--space-xs) var(--space-md);
-    color: var(--karriere-red);
+    color: var(--pure-black);
     font-size: 0.85rem;
     font-weight: 700;
     min-width: 280px;
@@ -1310,16 +1310,20 @@ body {
     white-space: nowrap;
     text-align: center;
     cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 8px rgba(255, 3, 3, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
-.metric-wrapper:hover .metric-bubble,
+.metric-wrapper:hover .metric-bubble {
+    box-shadow: 0 4px 20px rgba(255, 3, 3, 0.15);
+    border-color: var(--karriere-red);
+    transform: scale(1.02);
+}
+
 .metric-wrapper.active .metric-bubble {
-    box-shadow: 0 6px 20px rgba(254, 204, 2, 0.4);
+    box-shadow: 0 2px 12px rgba(254, 204, 2, 0.2);
     border-color: var(--karriere-gold);
-    color: var(--karriere-gold);
-    background: rgba(255, 255, 255, 1);
+    background: var(--pure-white);
 }
 
 /* White info box - border only visible when open */

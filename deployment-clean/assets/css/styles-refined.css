@@ -1402,29 +1402,32 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(255, 255, 255, 0.95);
-    border: 3px solid var(--light-blue);
+    background: var(--pure-white);
+    border: 2px solid var(--pure-black);
     border-radius: var(--radius-full);
     padding: var(--space-md) calc(var(--space-xl) * 1.5);
-    color: var(--dark-blue);
+    color: var(--pure-black);
     font-size: 1rem;
     font-weight: 700;
     min-height: 56px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-shadow: none;
-    box-shadow: 0 4px 16px rgba(254, 204, 2, 0.25);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
     -webkit-tap-highlight-color: transparent;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
-.xray-toggle:hover,
+.xray-toggle:hover {
+    border-color: var(--karriere-red);
+    box-shadow: 0 4px 20px rgba(255, 3, 3, 0.15);
+    transform: scale(1.02);
+}
+
+.xray-toggle:active,
 .xray-wrapper.active .xray-toggle {
-    box-shadow: 0 6px 20px rgba(254, 204, 2, 0.4);
-    border-color: var(--light-orange);
-    background: var(--pure-white);
-    transform: translateY(-2px);
+    border-color: var(--karriere-gold);
+    box-shadow: 0 2px 12px rgba(254, 204, 2, 0.2);
+    transform: scale(0.98);
 }
 
 .xray-content {

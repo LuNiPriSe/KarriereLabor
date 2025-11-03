@@ -451,7 +451,7 @@ body {
 
 .liquid-button-primary {
     background: var(--pure-white);
-    color: var(--karriere-red) !important;
+    color: var(--pure-black) !important;
     font-weight: 700;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
     border: 2px solid var(--pure-black);
@@ -463,14 +463,13 @@ body {
 
 .liquid-button-primary:hover {
     transform: scale(1.02);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-    border-bottom: 3px solid var(--karriere-gold);
-    border-bottom-width: 3px;
+    box-shadow: 0 4px 20px rgba(255, 3, 3, 0.15);
+    border-color: var(--karriere-red);
 }
 
 .liquid-button-primary:active {
     transform: scale(0.98);
-    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 12px rgba(254, 204, 2, 0.2);
     border-color: var(--karriere-gold);
 }
 
@@ -1086,40 +1085,36 @@ body {
     text-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
 }
 
-/* CTA Button */
+/* CTA Button - Standardized */
 .service-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg,
-        var(--light-blue) 0%,
-        var(--light-orange) 100%);
-    color: var(--pure-white);
+    background: var(--pure-white);
+    color: var(--pure-black);
     padding: var(--space-md) var(--space-xl);
     border-radius: var(--radius-full);
     text-decoration: none;
     font-weight: 700;
     font-family: var(--font-primary);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     margin-top: auto;
-    box-shadow:
-        var(--shadow-premium),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    border: 1px solid transparent;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    border: 2px solid var(--pure-black);
     position: relative;
-    overflow: hidden;
     font-size: 1rem;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .service-cta:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow:
-        var(--shadow-glow),
-        0 25px 50px rgba(212, 149, 125, 0.2),
-        0 8px 30px rgba(255, 107, 53, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    filter: brightness(1.1) saturate(1.1);
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(255, 3, 3, 0.15);
+    border-color: var(--karriere-red);
+}
+
+.service-cta:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 12px rgba(254, 204, 2, 0.2);
+    border-color: var(--karriere-gold);
 }
 
 /* ============================================================================
@@ -1829,29 +1824,30 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--dark-blue), var(--light-blue));
-    color: var(--pure-white);
+    background: var(--pure-white);
+    color: var(--pure-black);
     padding: var(--space-lg) var(--space-2xl);
     border-radius: var(--radius-full);
     text-decoration: none;
     font-weight: 700;
     font-family: var(--font-primary);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--shadow-premium);
-    border: 1px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    border: 2px solid var(--pure-black);
     position: relative;
-    overflow: hidden;
     font-size: 1.125rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .methodology-button:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow:
-        var(--shadow-glow),
-        0 30px 60px rgba(212, 149, 125, 0.2),
-        0 10px 40px rgba(255, 107, 53, 0.2);
-    filter: brightness(1.1) saturate(1.1);
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(255, 3, 3, 0.15);
+    border-color: var(--karriere-red);
+}
+
+.methodology-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 12px rgba(254, 204, 2, 0.2);
+    border-color: var(--karriere-gold);
 }
 
 @media (max-width: 768px) {
@@ -3043,23 +3039,29 @@ body.slide-transition {
     align-items: center;
     justify-content: center;
     gap: var(--space-xs);
-    background: var(--karriere-red);
-    border: 2px solid var(--karriere-red);
+    background: var(--pure-white);
+    border: 2px solid var(--pure-black);
     border-radius: var(--radius-sm);
     padding: 6px 16px;
-    color: var(--pure-white);
+    color: var(--pure-black);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.8125rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     margin-top: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .linkedin-button:hover {
-    background: var(--pure-white);
-    color: var(--karriere-red);
-    transform: translateY(-1px);
-    box-shadow: 0 3px 12px rgba(255, 3, 3, 0.2);
+    border-color: var(--karriere-red);
+    transform: scale(1.02);
+    box-shadow: 0 3px 12px rgba(255, 3, 3, 0.15);
+}
+
+.linkedin-button:active {
+    border-color: var(--karriere-gold);
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(254, 204, 2, 0.2);
 }
 
 .linkedin-icon {
@@ -3068,16 +3070,20 @@ body.slide-transition {
     justify-content: center;
     width: 18px;
     height: 18px;
-    background: var(--pure-white);
-    color: var(--karriere-red);
+    background: var(--pure-black);
+    color: var(--pure-white);
     border-radius: 2px;
     font-weight: 700;
     font-size: 0.7rem;
+    transition: all 0.3s ease;
 }
 
 .linkedin-button:hover .linkedin-icon {
     background: var(--karriere-red);
-    color: var(--pure-white);
+}
+
+.linkedin-button:active .linkedin-icon {
+    background: var(--karriere-gold);
 }
 
 /* Right Column: Language */

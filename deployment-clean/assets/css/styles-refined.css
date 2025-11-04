@@ -3147,7 +3147,7 @@ body.slide-transition {
     background: #FFFFFF;
     border-top: 3px solid var(--karriere-red);
     padding: var(--space-2xl) 0 var(--space-md);
-    margin-top: var(--space-4xl);
+    /* margin-top: var(--space-4xl); */
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -3159,7 +3159,7 @@ body.slide-transition {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-2xl);
     margin-bottom: var(--space-lg);
     align-items: center;
@@ -3324,11 +3324,16 @@ body.slide-transition {
     transform: scale(1.03);
 }
 
-.footer-legal {
+.footer-branding .footer-legal {
     display: flex;
     align-items: center;
     gap: var(--space-xs);
     flex-wrap: wrap;
+}
+
+.footer-language-section .footer-legal {
+    text-align: right;
+    margin-top: var(--space-xs);
 }
 
 .footer-legal-link {
@@ -3347,13 +3352,9 @@ body.slide-transition {
     font-size: 0.75rem;
 }
 
-/* Center Column: Profile */
+/* Center Column: Profile - HIDDEN */
 .footer-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: var(--space-sm);
+    display: none;
 }
 
 .footer-profile .profile-image {
@@ -3464,10 +3465,7 @@ body.slide-transition {
 }
 
 .footer-language-title {
-    color: var(--pure-black);
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin: 0;
+    display: none;
 }
 
 .footer-language-switcher {
@@ -3644,42 +3642,43 @@ body.slide-transition {
 }
 
 .legal-content {
-    background: var(--dark-slate);
+    background: var(--warm-cream);
     padding: var(--space-4xl) 0;
 }
 
 .legal-section {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-lg);
     padding: var(--space-xl);
     margin-bottom: var(--space-xl);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .legal-section h2 {
-    color: var(--pure-white);
+    color: var(--pure-black);
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: var(--space-md);
-    border-bottom: 2px solid var(--light-orange);
+    border-bottom: 2px solid var(--karriere-red);
     padding-bottom: var(--space-sm);
 }
 
 .legal-section h3 {
-    color: var(--cyan-light);
+    color: var(--karriere-red);
     font-size: 1.2rem;
     font-weight: 600;
     margin: var(--space-lg) 0 var(--space-md);
 }
 
 .legal-section p {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(0, 0, 0, 0.85);
     line-height: 1.7;
     margin-bottom: var(--space-md);
 }
 
 .legal-section ul {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(0, 0, 0, 0.85);
     line-height: 1.7;
     margin-left: var(--space-lg);
     margin-bottom: var(--space-md);
@@ -3690,21 +3689,22 @@ body.slide-transition {
 }
 
 .legal-info {
-    background: rgba(15, 23, 42, 0.3);
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    background: rgba(212, 149, 125, 0.08);
+    border: 1px solid var(--karriere-gold);
     border-radius: var(--radius-md);
     padding: var(--space-lg);
     margin: var(--space-md) 0;
 }
 
 .legal-section a {
-    color: var(--light-orange);
+    color: var(--karriere-red);
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 .legal-section a:hover {
-    color: var(--light-blue);
+    color: var(--karriere-gold);
     text-decoration: underline;
 }
 
@@ -3712,11 +3712,11 @@ body.slide-transition {
     text-align: center;
     margin-top: var(--space-2xl);
     padding-top: var(--space-lg);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .legal-update p {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
     font-size: 0.875rem;
     margin: 0;
 }

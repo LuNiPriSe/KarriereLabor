@@ -1888,17 +1888,12 @@ img {
         background: linear-gradient(135deg,
             rgba(254, 204, 2, 0.12) 0%,
             rgba(255, 3, 3, 0.08) 100%);
+        border-bottom: 3px solid;
+        border-image: linear-gradient(90deg, var(--karriere-red), var(--karriere-gold)) 1;
     }
 
     .use-case-tab.active::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 3px;
-        background: linear-gradient(90deg, var(--karriere-red), var(--karriere-gold));
-        border-radius: 0;
+        display: none;
     }
 
     .use-case-tab.active .tab-icon {

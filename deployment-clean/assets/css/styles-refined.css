@@ -1893,11 +1893,11 @@ img {
         content: '';
         position: absolute;
         left: 0;
-        top: 0;
+        right: 0;
         bottom: 0;
-        width: 3px;
-        background: linear-gradient(135deg, var(--karriere-red), var(--karriere-gold));
-        border-radius: 0 3px 3px 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--karriere-red), var(--karriere-gold));
+        border-radius: 0;
     }
 
     .use-case-tab.active .tab-icon {

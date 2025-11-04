@@ -1279,7 +1279,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s 0.3s;
-    padding: var(--space-lg);
+    padding: 0 var(--space-sm);
     pointer-events: none;
 }
 
@@ -1884,23 +1884,30 @@ img {
     }
 
     .use-case-tab.active {
-        background: transparent;
-        border-bottom: 3px solid var(--soft-gold);
+        background: linear-gradient(135deg,
+            rgba(254, 204, 2, 0.12) 0%,
+            rgba(255, 3, 3, 0.08) 100%);
     }
 
     .use-case-tab.active::before {
-        display: none;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(135deg, var(--karriere-red), var(--karriere-gold));
+        border-radius: 0 3px 3px 0;
     }
 
     .use-case-tab.active .tab-icon {
         transform: scale(1.02) translateY(-2px);
-        filter: drop-shadow(0 0 8px var(--soft-gold)) drop-shadow(0 0 12px rgba(139, 92, 246, 0.5));
     }
 
     .use-case-tab span {
         font-size: 0.8rem;
         line-height: 1.2;
-        color: var(--deep-blue);
+        color: var(--pure-black);
         font-weight: 500;
         max-width: 100%;
         overflow-wrap: break-word;
@@ -1908,7 +1915,7 @@ img {
     }
 
     .use-case-tab.active span {
-        color: var(--soft-gold);
+        color: var(--pure-black);
         font-weight: 600;
     }
 

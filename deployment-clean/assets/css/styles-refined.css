@@ -918,7 +918,7 @@ body {
     line-height: 1.2;
 }
 
-.comparison-icon {
+.comparison-icon .service-icon {
     font-size: 3rem;
     text-align: center;
     margin-bottom: var(--space-md);
@@ -976,7 +976,7 @@ body {
 }
 
 .service-icon {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     margin-bottom: var(--space-lg);
     filter: drop-shadow(0 0 10px currentColor);
@@ -1030,7 +1030,7 @@ body {
 }
 
 /* Style icons specifically */
-.service-card li:before {
+.comparison-card li:before {
     content: '✓';
     color: var(--light-blue);
     font-weight: 700;

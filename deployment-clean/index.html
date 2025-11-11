@@ -103,22 +103,23 @@
             background-position: center;
         }
 
-        /* Critical first 3 slide backgrounds - inline for instant rendering without flash */
-        .hero-slide-1 {
-            background: url('assets/images/gallery-bg-1-clarity-direction.jpg') center/cover no-repeat;
+        /* Hero background images using picture element for optimal performance */
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .hero-bg-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .hero-slide {
             background-color: #FFFBF0; /* Fallback during load */
-        }
-        .hero-slide-2 {
-            background: url('assets/images/hero-2-funding-accessible.jpg') center/cover no-repeat;
-            background-color: #FFFBF0;
-        }
-        .hero-slide-3 {
-            background: url('assets/images/hero-2-research-analyze.jpg') center/cover no-repeat;
-            background-color: #FFFBF0;
-        }
-        /* Slides 4-5 load from main CSS with fallback */
-        .hero-slide-4, .hero-slide-5 {
-            background-color: #FFFBF0;
         }
 
         /* Critical hero h1 - LCP element with full styling */
@@ -214,6 +215,15 @@
     <div class="swiper hero-swiper" id="heroGallery">
         <div class="swiper-wrapper">
             <div class="swiper-slide hero-slide hero-slide-1 active">
+                <picture class="hero-bg-image">
+                    <source srcset="assets/images/hero-5-strategy-consultation-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                    <source srcset="assets/images/hero-5-strategy-consultation-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                    <source srcset="assets/images/hero-5-strategy-consultation-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                    <source srcset="assets/images/hero-5-strategy-consultation-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                    <source srcset="assets/images/hero-5-strategy-consultation-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                    <source srcset="assets/images/hero-5-strategy-consultation-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <img src="assets/images/hero-5-strategy-consultation-desktop.jpg" alt="" loading="eager" width="1024" height="1024">
+                </picture>
                 <div class="slide-content">
                     <h1>Sie suchen Arbeit oder Einkommen?</h1>
                     <p class="slide-subtitle">Wir helfen Ihnen, Ihren individuellen Weg zu finden. Klarheit, Strategie und konkrete Schritte zu Ihrem Ziel.</p>
@@ -229,6 +239,15 @@
                 </div>
             </div>
             <div class="swiper-slide hero-slide hero-slide-2">
+                <picture class="hero-bg-image">
+                    <source srcset="assets/images/hero-2-funding-accessible-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                    <source srcset="assets/images/hero-2-funding-accessible-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                    <source srcset="assets/images/hero-2-funding-accessible-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                    <source srcset="assets/images/hero-2-funding-accessible-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                    <source srcset="assets/images/hero-2-funding-accessible-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                    <source srcset="assets/images/hero-2-funding-accessible-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <img src="assets/images/hero-2-funding-accessible-desktop.jpg" alt="" loading="eager" width="864" height="1184">
+                </picture>
                 <div class="slide-content">
                     <h1>In den meisten Fällen für Sie kostenfrei</h1>
                     <p class="slide-subtitle">Wir sind Experten für AVGS und BAFA-Förderung. Professionelles Coaching ohne finanzielle Hürden.</p>
@@ -244,6 +263,15 @@
                 </div>
             </div>
             <div class="swiper-slide hero-slide hero-slide-3">
+                <picture class="hero-bg-image">
+                    <source srcset="assets/images/hero-2-research-analyze-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                    <source srcset="assets/images/hero-2-research-analyze-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                    <source srcset="assets/images/hero-2-research-analyze-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                    <source srcset="assets/images/hero-2-research-analyze-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                    <source srcset="assets/images/hero-2-research-analyze-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                    <source srcset="assets/images/hero-2-research-analyze-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <img src="assets/images/hero-2-research-analyze-desktop.jpg" alt="" loading="eager" width="1024" height="1024">
+                </picture>
                 <div class="slide-content">
                     <h1>Nicht sicher, welcher Weg der beste ist?</h1>
                     <p class="slide-subtitle">Wir analysieren gemeinsam in unserem Labor. Forschung, Methodik und präzise Strategien für Ihre Karriere.</p>
@@ -259,6 +287,15 @@
                 </div>
             </div>
             <div class="swiper-slide hero-slide hero-slide-4">
+                <picture class="hero-bg-image">
+                    <source srcset="assets/images/gallery-bg-4-confidence-success-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                    <source srcset="assets/images/gallery-bg-4-confidence-success-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                    <source srcset="assets/images/gallery-bg-4-confidence-success-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                    <source srcset="assets/images/gallery-bg-4-confidence-success-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                    <source srcset="assets/images/gallery-bg-4-confidence-success-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                    <source srcset="assets/images/gallery-bg-4-confidence-success-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <img src="assets/images/gallery-bg-4-confidence-success-desktop.jpg" alt="" loading="lazy" width="1024" height="1024">
+                </picture>
                 <div class="slide-content">
                     <h1>Selbstvertrauen finden. Üben. Erfolgreich sein.</h1>
                     <p class="slide-subtitle">Bewerbungen meistern, Stärken entdecken, Jobs finden die Sie wirklich wollen. Vom Zweifel zur Zuversicht.</p>
@@ -274,6 +311,15 @@
                 </div>
             </div>
             <div class="swiper-slide hero-slide hero-slide-5">
+                <picture class="hero-bg-image">
+                    <source srcset="assets/images/hero-5-startup-consultation-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                    <source srcset="assets/images/hero-5-startup-consultation-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                    <source srcset="assets/images/hero-5-startup-consultation-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                    <source srcset="assets/images/hero-5-startup-consultation-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                    <source srcset="assets/images/hero-5-startup-consultation-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                    <source srcset="assets/images/hero-5-startup-consultation-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <img src="assets/images/hero-5-startup-consultation-desktop.jpg" alt="" loading="lazy" width="864" height="708">
+                </picture>
                 <div class="slide-content">
                     <h1>Sie haben eine Idee?</h1>
                     <p class="slide-subtitle">Wir helfen mit Konzept, beim Überwinden von Hürden und Gründer-Förderung. BAFA-gefördert – bis zu 80% Zuschuss.</p>

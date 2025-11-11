@@ -292,11 +292,8 @@ body {
     z-index: 5;
 }
 
+/* Removed background-image rules - now using picture elements in HTML */
 .hero-slide-4 {
-    background:
-        url('../images/gallery-bg-4-confidence-success.jpg');
-    background-size: cover;
-    background-position: center;
     position: relative;
 }
 
@@ -311,10 +308,6 @@ body {
 }
 
 .hero-slide-5 {
-    background:
-        url('../images/hero-5-startup-consultation.jpg');
-    background-size: cover;
-    background-position: center;
     position: relative;
 }
 

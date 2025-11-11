@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml/">
+  <url>
+    <loc>https://karrierelabor.de/index.html</loc>
+    <lastmod>2025-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://karrierelabor.de/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://karrierelabor.de/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karrierelabor.de/index.html" />
+  </url>
+  <url>
+    <loc>https://karrierelabor.de/en/index.html</loc>
+    <lastmod>2025-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://karrierelabor.de/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://karrierelabor.de/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karrierelabor.de/index.html" />
+  </url>
+  <url>
+    <loc>https://karrierelabor.de/es/index.html</loc>
+    <lastmod>2025-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://karrierelabor.de/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://karrierelabor.de/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karrierelabor.de/index.html" />
+  </url>
+  <url>
+    <loc>https://karrierelabor.de/impressum.html</loc>
+    <lastmod>2025-11-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

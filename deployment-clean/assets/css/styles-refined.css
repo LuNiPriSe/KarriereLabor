@@ -234,7 +234,7 @@ body {
 /* Modern Slide Backgrounds with Enhanced Moving Gradients */
 .hero-slide-1 {
     background:
-        url('../images/gallery-bg-1-clarity-direction.jpg');
+        url('../images/hero-2-funding-accessible.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -254,7 +254,7 @@ body {
 
 .hero-slide-2 {
     background:
-        url('../images/hero-2-funding-accessible.jpg');
+        url('../images/hero-5-strategy-consultation.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -312,7 +312,7 @@ body {
 
 .hero-slide-5 {
     background:
-        url('../images/hero-5-strategy-consultation.jpg');
+        url('../images/hero-5-startup-consultation.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -1174,6 +1174,8 @@ body {
     min-width: 0; /* Allow text wrapping */
     overflow-wrap: break-word;
     word-wrap: break-word;
+    text-decoration: none;
+    color: inherit;
 }
 
 .use-case-tab:last-child {

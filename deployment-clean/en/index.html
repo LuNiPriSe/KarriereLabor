@@ -47,9 +47,9 @@
     <link rel="manifest" href="../assets/favicon/site.webmanifest">
 
     <!-- Preload first 3 hero slides for instant rendering without flash -->
-    <link rel="preload" href="../assets/images/hero-1-career-discovery.jpg" as="image" fetchpriority="high">
-    <link rel="preload" href="../assets/images/hero-2-research-analyze.jpg" as="image">
-    <link rel="preload" href="../assets/images/hero-3-application-experiment.jpg" as="image">
+    <!-- Preload disabled to avoid warnings; re-enable for production -->
+    <!-- Preload disabled to avoid warnings; re-enable for production -->
+    <!-- Preload disabled to avoid warnings; re-enable for production -->
 
     <!-- CRITICAL CSS INLINE - Instant LCP rendering, zero blocking -->
     <style>
@@ -180,7 +180,7 @@
     <div class="language-switcher">
         <div class="language-toggle">🇬🇧</div>
         <div class="language-dropdown">
-            <a href="../de/index.html" title="Deutsch" hreflang="de" lang="de">🇩🇪 Deutsch</a>
+            <a href="../index.html" title="Deutsch" hreflang="de" lang="de">🇩🇪 Deutsch</a>
             <a href="./index.html" class="active" title="English" hreflang="en" lang="en">🇬🇧 English</a>
             <a href="../es/index.html" title="Español" hreflang="es" lang="es">🇪🇸 Español</a>
         </div>
@@ -405,38 +405,38 @@
         <div class="use-cases-interactive">
             <!-- Left Menu -->
             <div class="use-case-menu">
-                <div class="use-case-tab active" data-case="existenzgruendung">
+                <a href="#existenzgruendung" class="use-case-tab active" data-case="existenzgruendung">
                     <div class="tab-icon">🚀</div>
                     <span>Start-up Coaching</span>
-                </div>
-                <div class="use-case-tab" data-case="bewerbungscoaching">
+                </a>
+                <a href="#bewerbungscoaching" class="use-case-tab" data-case="bewerbungscoaching">
                     <div class="tab-icon">💼</div>
                     <span>Application Coaching</span>
-                </div>
-                <div class="use-case-tab" data-case="perspektiven-finden">
+                </a>
+                <a href="#perspektiven-finden" class="use-case-tab" data-case="perspektiven-finden">
                     <div class="tab-icon">🎯</div>
                     <span>Finding Perspectives</span>
-                </div>
-                <div class="use-case-tab" data-case="familie-job">
+                </a>
+                <a href="#familie-job" class="use-case-tab" data-case="familie-job">
                     <div class="tab-icon">👨‍👩‍👧‍👦</div>
                     <span>Family with a Job!</span>
-                </div>
-                <div class="use-case-tab" data-case="migration">
+                </a>
+                <a href="#migration" class="use-case-tab" data-case="migration">
                     <div class="tab-icon">🌍</div>
                     <span>Application Coaching for Migrants</span>
-                </div>
-                <div class="use-case-tab" data-case="integrationsbegleiter">
+                </a>
+                <a href="#integrationsbegleiter" class="use-case-tab" data-case="integrationsbegleiter">
                     <div class="tab-icon">🤝</div>
                     <span>Integration Assistant</span>
-                </div>
-                <div class="use-case-tab" data-case="hauptschulabschluss">
+                </a>
+                <a href="#hauptschulabschluss" class="use-case-tab" data-case="hauptschulabschluss">
                     <div class="tab-icon">🎓</div>
                     <span>Secondary School Diploma</span>
-                </div>
-                <div class="use-case-tab" data-case="sprachcoaching">
+                </a>
+                <a href="#sprachcoaching" class="use-case-tab" data-case="sprachcoaching">
                     <div class="tab-icon">🗣️</div>
                     <span>Language Coaching</span>
-                </div>
+                </a>
             </div>
 
             <!-- Center Image -->
@@ -469,7 +469,7 @@
 
             <!-- Right Description -->
             <div class="use-case-details">
-                <div class="use-case-content active" data-case="existenzgruendung">
+                <div id="existenzgruendung" class="use-case-content active" data-case="existenzgruendung">
                     <h3>Individual Start-up Coaching</h3>
                     <p><strong>Your Situation:</strong> You dream of having your own company, but the mountain of bureaucracy and planning is robbing you of your courage? You're wondering how to turn a good idea into a viable business.</p>
                     <p><strong>Our Approach:</strong> We bring clarity to the start-up jungle. With over 20 years of our own start-up experience, we accompany you pragmatically and goal-oriented. We translate your vision into a solid business plan and show you how to get the necessary financing.</p>
@@ -534,7 +534,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="use-case-content" data-case="bewerbungscoaching">
+                <div id="bewerbungscoaching" class="use-case-content" data-case="bewerbungscoaching">
                     <h3>Individual Coaching - Application Coaching</h3>
                     <p><strong>Your Situation:</strong> You write applications, but the rejections are piling up. You are unsure whether your documents are still up-to-date and how you can really convince in an interview. You finally want the job that suits you.</p>
                     <p><strong>Our Approach:</strong> We get you fit for the application marathon. From optimizing your documents to targeted preparation for tricky interview questions to professional self-marketing - we give you the tools you need to stand out from the crowd.</p>
@@ -585,7 +585,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="use-case-content" data-case="perspektiven-finden">
+                <div id="perspektiven-finden" class="use-case-content" data-case="perspektiven-finden">
                     <h3>Individual Coaching - Finding Perspectives</h3>
                     <p><strong>Your Situation:</strong> You feel like you're in a dead end professionally or privately. You lack orientation and don't know how to take the next step on your own. You need a clear head and a concrete plan.</p>
                     <p><strong>Our Approach:</strong> We help you to clear the chaos. Through socio-pedagogical support and targeted management coaching, we identify your blockades and develop new, realistic life and career perspectives together. As part of the coaching, we also use the scientifically-based <a href="https://karrierelabor.de/DISC" target="_blank" rel="noopener" style="color: var(--light-orange); font-weight: 600; text-decoration: underline;">DISC personality test</a> to better understand your strengths and communication styles. We are your compass when you have lost your way.</p>
@@ -635,7 +635,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="use-case-content" data-case="familie-job">
+                <div id="familie-job" class="use-case-content" data-case="familie-job">
                     <h3>Individual Coaching - Family with a Job!</h3>
                     <p><strong>Your Situation:</strong> The balancing act between family and career often feels like an impossible task. You want to get back on your feet professionally without neglecting your family, and you're looking for a way to master both without stress.</p>
                     <p><strong>Our Approach:</strong> We understand your double burden. That's why we not only offer flexible individual coaching, but also childcare during appointments if needed. Together, we develop practical strategies for how you can make a successful comeback and find a healthy work-life balance.</p>
@@ -671,7 +671,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="use-case-content" data-case="migration">
+                <div id="migration" class="use-case-content" data-case="migration">
                     <h3>Individual Coaching - Application Coaching for Migrants</h3>
                     <p><strong>Your Situation:</strong> You have arrived in Germany and want to gain a foothold in your career, but the language, culture and application system are still foreign to you. You need an understanding partner to help you overcome these hurdles.</p>
                     <p><strong>Our Approach:</strong> We build bridges to the German labor market. In our coaching, you will not only learn how to write convincing applications, but also the unwritten rules of the German working world. We support you in the recognition of your qualifications and, if you wish, even accompany you during a work trial.</p>
@@ -709,7 +709,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="use-case-content" data-case="integrationsbegleiter">
+                <div id="integrationsbegleiter" class="use-case-content" data-case="integrationsbegleiter">
                     <h3>Integration Assistant for Young People</h3>
                     <p><strong>Your Situation:</strong> You enjoy working with young people and want to support them in their everyday school life, but you lack the pedagogical qualification? You are looking for practical further training that will prepare you for work as a school assistant or companion.</p>
                     <p><strong>Our Approach:</strong> This further training is your foundation for a meaningful activity. In part-time and with block events during the holidays, you will learn everything you need to know about pedagogy, communication, types of disability and conflict resolution. We make you fit for practice so that you can be a real support for young people.</p>
@@ -786,12 +786,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="use-case-content" data-case="hauptschulabschluss">
+                <div id="hauptschulabschluss" class="use-case-content" data-case="hauptschulabschluss">
                     <h3>High School Diploma with Vocational Knowledge</h3>
                     <p><strong>Your Situation:</strong> You want to catch up on your high school diploma to get a head start in your career, but the thought of school and exams makes you nervous? You need more than just lessons - you need targeted preparation and practical skills for the job market.</p>
                     <p><strong>Our Approach:</strong> In small groups, we prepare you intensively and individually for the exams. We not only teach the school material, but also important IT basics and organize an internship so that you can build a bridge to your profession. With us, the focus is on you, not the curriculum.</p>
                 </div>
-                <div class="use-case-content" data-case="sprachcoaching">
+                <div id="sprachcoaching" class="use-case-content" data-case="sprachcoaching">
                     <h3>Individual Coaching - Language Coaching for the Job Search</h3>
                     <p><strong>Your Situation:</strong> You have good qualifications, but the German language is still a hurdle on the way to the right job? You don't just want to learn grammar, but want to master the language specifically for applications and everyday work.</p>
                     <p><strong>Our Approach:</strong> We make you linguistically fit for the German labor market. In our individual coaching, you will train exactly the language skills you need for a successful application and confident communication on the job. We even prepare you for job-related language exams.</p>
@@ -962,7 +962,7 @@
                 <div class="footer-language-switcher">
                     <div class="footer-language-toggle">🇬🇧</div>
                     <div class="footer-language-dropdown">
-                        <a href="../de/index.html" hreflang="de" lang="de">🇩🇪 Deutsch</a>
+                        <a href="../index.html" hreflang="de" lang="de">🇩🇪 Deutsch</a>
                         <a href="../en/index.html" class="active" hreflang="en" lang="en">🇬🇧 English</a>
                         <a href="../es/index.html" hreflang="es" lang="es">🇪🇸 Español</a>
                     </div>

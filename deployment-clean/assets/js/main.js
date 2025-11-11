@@ -394,7 +394,9 @@
         const tabs = document.querySelectorAll('.use-case-tab');
 
         tabs.forEach(tab => {
-            tab.addEventListener('click', function() {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default anchor behavior
+
                 const targetCase = this.dataset.case;
 
                 // Update active tab
@@ -414,6 +416,21 @@
                 // Update ARIA
                 tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
                 this.setAttribute('aria-selected', 'true');
+
+                // Scroll to content on mobile for better UX
+                if (window.innerWidth <= 768) {
+                    setTimeout(() => {
+                        const useCaseDetails = document.querySelector('.use-case-details');
+                        if (useCaseDetails) {
+                            const offset = 100; // Account for any fixed headers
+                            const elementTop = useCaseDetails.getBoundingClientRect().top + window.pageYOffset;
+                            window.scrollTo({
+                                top: elementTop - offset,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }, 300); // Small delay to allow content to update first
+                }
             });
 
             // Handle keyboard navigation

@@ -47,9 +47,9 @@
     <link rel="manifest" href="../assets/favicon/site.webmanifest">
 
     <!-- Preload first 3 hero slides for instant rendering without flash -->
-    <link rel="preload" href="../assets/images/hero-1-career-discovery.jpg" as="image" fetchpriority="high">
-    <link rel="preload" href="../assets/images/hero-2-research-analyze.jpg" as="image">
-    <link rel="preload" href="../assets/images/hero-3-application-experiment.jpg" as="image">
+    <!-- Preload disabled to avoid warnings; re-enable for production -->
+    <!-- Preload disabled to avoid warnings; re-enable for production -->
+    <!-- Preload disabled to avoid warnings; re-enable for production -->
 
     <!-- CRITICAL CSS INLINE - Instant LCP rendering, zero blocking -->
     <style>
@@ -180,7 +180,7 @@
     <div class="language-switcher">
         <div class="language-toggle">🇪🇸</div>
         <div class="language-dropdown">
-            <a href="../de/index.html" title="Deutsch" hreflang="de" lang="de">🇩🇪 Deutsch</a>
+            <a href="../index.html" title="Deutsch" hreflang="de" lang="de">🇩🇪 Deutsch</a>
             <a href="../en/index.html" title="English" hreflang="en" lang="en">🇬🇧 English</a>
             <a href="./index.html" class="active" title="Español" hreflang="es" lang="es">🇪🇸 Español</a>
         </div>
@@ -405,38 +405,38 @@
         <div class="use-cases-interactive">
             <!-- Left Menu -->
             <div class="use-case-menu">
-                <div class="use-case-tab active" data-case="existenzgruendung">
+                <a href="#existenzgruendung" class="use-case-tab active" data-case="existenzgruendung">
                     <div class="tab-icon">🚀</div>
                     <span>Coaching para emprendedores</span>
-                </div>
-                <div class="use-case-tab" data-case="bewerbungscoaching">
+                </a>
+                <a href="#bewerbungscoaching" class="use-case-tab" data-case="bewerbungscoaching">
                     <div class="tab-icon">💼</div>
                     <span>Coaching de aplicación</span>
-                </div>
-                <div class="use-case-tab" data-case="perspektiven-finden">
+                </a>
+                <a href="#perspektiven-finden" class="use-case-tab" data-case="perspektiven-finden">
                     <div class="tab-icon">🎯</div>
                     <span>Encontrar perspectivas</span>
-                </div>
-                <div class="use-case-tab" data-case="familie-job">
+                </a>
+                <a href="#familie-job" class="use-case-tab" data-case="familie-job">
                     <div class="tab-icon">👨‍👩‍👧‍👦</div>
                     <span>¡Familia con trabajo!</span>
-                </div>
-                <div class="use-case-tab" data-case="migration">
+                </a>
+                <a href="#migration" class="use-case-tab" data-case="migration">
                     <div class="tab-icon">🌍</div>
                     <span>Coaching de aplicación para migrantes</span>
-                </div>
-                <div class="use-case-tab" data-case="integrationsbegleiter">
+                </a>
+                <a href="#integrationsbegleiter" class="use-case-tab" data-case="integrationsbegleiter">
                     <div class="tab-icon">🤝</div>
                     <span>Asistente de integración</span>
-                </div>
-                <div class="use-case-tab" data-case="hauptschulabschluss">
+                </a>
+                <a href="#hauptschulabschluss" class="use-case-tab" data-case="hauptschulabschluss">
                     <div class="tab-icon">🎓</div>
                     <span>Diploma de secundaria</span>
-                </div>
-                <div class="use-case-tab" data-case="sprachcoaching">
+                </a>
+                <a href="#sprachcoaching" class="use-case-tab" data-case="sprachcoaching">
                     <div class="tab-icon">🗣️</div>
                     <span>Coaching de idiomas</span>
-                </div>
+                </a>
             </div>
 
             <!-- Center Image -->
@@ -470,7 +470,7 @@
             <!-- Right Description -->
             <div class="use-case-details">
                 <!-- 1. Coaching individual para la creación de empresas -->
-                <div class="use-case-content active" data-case="existenzgruendung">
+                <div id="existenzgruendung" class="use-case-content active" data-case="existenzgruendung">
                     <h3>Coaching individual para la creación de empresas</h3>
                     <p><strong>Su Situación:</strong> ¿Sueña con tener su propia empresa, pero la montaña de burocracia y planificación le roba el valor? Se pregunta cómo convertir una buena idea en un negocio viable.</p>
                     <p><strong>Nuestro Enfoque:</strong> Aportamos claridad a la jungla de la creación de empresas. Con más de 20 años de experiencia propia en la creación de empresas, le acompañamos de forma pragmática y orientada a los objetivos. Traducimos su visión en un plan de negocio sólido y le mostramos cómo conseguir la financiación necesaria.</p>
@@ -536,7 +536,7 @@
                     </div>
                 </div>
                 <!-- 2. Coaching individual - Coaching de aplicación -->
-                <div class="use-case-content" data-case="bewerbungscoaching">
+                <div id="bewerbungscoaching" class="use-case-content" data-case="bewerbungscoaching">
                     <h3>Coaching individual - Coaching de aplicación</h3>
                     <p><strong>Su Situación:</strong> Escribe solicitudes, pero los rechazos se acumulan. No está seguro de si sus documentos todavía están actualizados y de cómo puede convencer realmente en una entrevista. Finalmente quiere el trabajo que le conviene.</p>
                     <p><strong>Nuestro Enfoque:</strong> Le preparamos para el maratón de solicitudes. Desde la optimización de sus documentos hasta la preparación específica para preguntas de entrevista difíciles y el marketing personal profesional, le damos las herramientas que necesita para destacar entre la multitud.</p>
@@ -588,7 +588,7 @@
                     </div>
                 </div>
                 <!-- 3. Coaching individual - Encontrar perspectivas -->
-                <div class="use-case-content" data-case="perspektiven-finden">
+                <div id="perspektiven-finden" class="use-case-content" data-case="perspektiven-finden">
                     <h3>Coaching individual - Encontrar perspectivas</h3>
                     <p><strong>Su Situación:</strong> Siente que está en un callejón sin salida profesional o privado. Le falta orientación y no sabe cómo dar el siguiente paso por su cuenta. Necesita una cabeza clara y un plan concreto.</p>
                     <p><strong>Nuestro Enfoque:</strong> Le ayudamos a despejar el caos. A través del apoyo sociopedagógico y el coaching de gestión específico, identificamos sus bloqueos y desarrollamos juntos nuevas perspectivas de vida y profesionales realistas. Somos su brújula cuando ha perdido el rumbo. Como parte del coaching, también utilizamos la <a href="https://karrierelabor.de/DISC" target="_blank" rel="noopener" style="color: var(--light-orange); font-weight: 600; text-decoration: underline;">prueba de personalidad DISC</a> científicamente fundamentada para comprender mejor sus fortalezas y estilos de comunicación.</p>
@@ -639,7 +639,7 @@
                     </div>
                 </div>
                 <!-- 4. Coaching individual - ¡Familia con trabajo! -->
-                <div class="use-case-content" data-case="familie-job">
+                <div id="familie-job" class="use-case-content" data-case="familie-job">
                     <h3>Coaching individual - ¡Familia con trabajo!</h3>
                     <p><strong>Su Situación:</strong> El acto de equilibrio entre la familia y la carrera a menudo se siente como una tarea imposible. Quiere volver a ponerse de pie profesionalmente sin descuidar a su familia, y está buscando una manera de dominar ambos sin estrés.</p>
                     <p><strong>Nuestro Enfoque:</strong> Entendemos su doble carga. Por eso, no solo ofrecemos coaching individual flexible, sino también cuidado de niños durante las citas si es necesario. Juntos, desarrollamos estrategias prácticas sobre cómo puede tener un regreso exitoso y encontrar un equilibrio saludable entre el trabajo y la vida.</p>
@@ -676,7 +676,7 @@
                     </div>
                 </div>
                 <!-- 5. Coaching individual - Coaching de aplicación para migrantes -->
-                <div class="use-case-content" data-case="migration">
+                <div id="migration" class="use-case-content" data-case="migration">
                     <h3>Coaching individual - Coaching de aplicación para migrantes</h3>
                     <p><strong>Su Situación:</strong> Ha llegado a Alemania y quiere establecerse profesionalmente, pero el idioma, la cultura y el sistema de solicitud de empleo todavía le son extraños. Necesita un socio comprensivo que le ayude a superar estos obstáculos.</p>
                     <p><strong>Nuestro Enfoque:</strong> Construimos puentes hacia el mercado laboral alemán. En nuestro coaching, no solo aprenderá a escribir solicitudes convincentes, sino también las reglas no escritas del mundo laboral alemán. Le apoyamos en el reconocimiento de sus cualificaciones e, si lo desea, incluso le acompañamos durante una prueba de trabajo.</p>
@@ -715,7 +715,7 @@
                     </div>
                 </div>
                 <!-- 6. Asistente de integración para jóvenes -->
-                <div class="use-case-content" data-case="integrationsbegleiter">
+                <div id="integrationsbegleiter" class="use-case-content" data-case="integrationsbegleiter">
                     <h3>Asistente de integración para jóvenes</h3>
                     <p><strong>Su Situación:</strong> ¿Le gusta trabajar con jóvenes y quiere apoyarles en su día a día escolar, pero le falta la cualificación pedagógica? Busca una formación práctica que le prepare para trabajar como asistente o acompañante escolar.</p>
                     <p><strong>Nuestro Enfoque:</strong> Esta formación es su base para una actividad significativa. A tiempo parcial y con eventos en bloque durante las vacaciones, aprenderá todo lo que necesita saber sobre pedagogía, comunicación, tipos de discapacidad y resolución de conflictos. Le preparamos para la práctica para que pueda ser un verdadero apoyo para los jóvenes.</p>
@@ -793,7 +793,7 @@
                     </div>
                 </div>
                 <!-- 7. Diploma de secundaria con transmisión de conocimientos profesionales -->
-                <div class="use-case-content" data-case="hauptschulabschluss">
+                <div id="hauptschulabschluss" class="use-case-content" data-case="hauptschulabschluss">
                     <h3>Diploma de secundaria con transmisión de conocimientos profesionales</h3>
                     <p><strong>Su Situación:</strong> ¿Quiere ponerse al día con su diploma de secundaria para empezar su carrera, pero el pensamiento de la escuela y los exámenes le pone nervioso? Necesita más que solo clases - necesita preparación específica y habilidades prácticas para el mercado laboral.</p>
                     <p><strong>Nuestro Enfoque:</strong> En grupos pequeños, le preparamos intensiva e individualmente para los exámenes. No solo enseñamos el material escolar, sino también importantes conocimientos de informática y organizamos unas prácticas para que pueda tender un puente hacia su profesión. Con nosotros, el centro de atención es usted, no el plan de estudios.</p>
@@ -830,7 +830,7 @@
                     </div>
                 </div>
                 <!-- 8. Coaching individual - Coaching de idiomas para la búsqueda de empleo -->
-                <div class="use-case-content" data-case="sprachcoaching">
+                <div id="sprachcoaching" class="use-case-content" data-case="sprachcoaching">
                     <h3>Coaching individual - Coaching de idiomas para la búsqueda de empleo</h3>
                     <p><strong>Su Situación:</strong> ¿Tiene buenas cualificaciones, pero el idioma alemán sigue siendo un obstáculo en el camino hacia el trabajo adecuado? No solo quiere aprender gramática, sino que quiere dominar el idioma específicamente para las solicitudes y el trabajo diario.</p>
                     <p><strong>Nuestro Enfoque:</strong> Le preparamos lingüísticamente para el mercado laboral alemán. En nuestro coaching individual, entrenará exactamente las habilidades lingüísticas que necesita para una solicitud exitosa y una comunicación segura en el trabajo. Incluso le preparamos para los exámenes de idiomas relacionados con el trabajo.</p>
@@ -1034,7 +1034,7 @@
                 <div class="footer-language-switcher">
                     <div class="footer-language-toggle">🇪🇸</div>
                     <div class="footer-language-dropdown">
-                        <a href="../de/index.html" hreflang="de" lang="de">🇩🇪 Deutsch</a>
+                        <a href="../index.html" hreflang="de" lang="de">🇩🇪 Deutsch</a>
                         <a href="../en/index.html" hreflang="en" lang="en">🇬🇧 English</a>
                         <a href="../es/index.html" class="active" hreflang="es" lang="es">🇪🇸 Español</a>
                     </div>

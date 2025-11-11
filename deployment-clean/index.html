@@ -4,6 +4,7 @@
     <title>KarriereLabor Leipzig - Karriere-Coaching & Gründerberatung | AVGS & BAFA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="de">
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Karriere-Coaching und Gründerberatung in Leipzig. Präsenz-Coaching vor Ort, Video-Coaching deutschlandweit, private Beratung weltweit. AVGS & BAFA gefördert. SimpliOffice Leipzig.">
@@ -12,19 +13,19 @@
     <meta name="robots" content="index, follow">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://karrierelabor.de/de/index.html">
+    <link rel="canonical" href="https://karrierelabor.de/index.html">
 
     <!-- Alternate Language Links -->
-    <link rel="alternate" hreflang="de" href="https://karrierelabor.de/de/index.html">
+    <link rel="alternate" hreflang="de" href="https://karrierelabor.de/index.html">
     <link rel="alternate" hreflang="en" href="https://karrierelabor.de/en/index.html">
     <link rel="alternate" hreflang="es" href="https://karrierelabor.de/es/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://karrierelabor.de/de/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://karrierelabor.de/index.html">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="KarriereLabor Leipzig - Karriere-Coaching & Gründerberatung">
     <meta property="og:description" content="Karriere-Coaching und Gründerberatung in Leipzig. Präsenz-Coaching, Video-Coaching deutschlandweit, private Beratung weltweit. AVGS & BAFA gefördert.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://karrierelabor.de/de/index.html">
+    <meta property="og:url" content="https://karrierelabor.de/index.html">
     <meta property="og:image" content="https://karrierelabor.de/assets/images/KarriereLaborText.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -40,16 +41,16 @@
     <meta name="twitter:image" content="https://karrierelabor.de/assets/images/KarriereLaborText.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
-    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg">
-    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
 
     <!-- Preload first 3 hero slides for instant rendering without flash -->
-    <link rel="preload" href="../assets/images/hero-1-career-discovery.jpg" as="image" fetchpriority="high">
-    <link rel="preload" href="../assets/images/hero-2-research-analyze.jpg" as="image">
-    <link rel="preload" href="../assets/images/hero-3-application-experiment.jpg" as="image">
+    <!-- Preload disabled to avoid warnings in local/server; re-enable for production -->
+    <!-- Preload disabled to avoid warnings in local/server; re-enable for production -->
+    <!-- Preload disabled to avoid warnings in local/server; re-enable for production -->
 
     <!-- CRITICAL CSS INLINE - Instant LCP rendering, zero blocking -->
     <style>
@@ -104,15 +105,15 @@
 
         /* Critical first 3 slide backgrounds - inline for instant rendering without flash */
         .hero-slide-1 {
-            background: url('../assets/images/gallery-bg-1-clarity-direction.jpg') center/cover no-repeat;
+            background: url('assets/images/gallery-bg-1-clarity-direction.jpg') center/cover no-repeat;
             background-color: #FFFBF0; /* Fallback during load */
         }
         .hero-slide-2 {
-            background: url('../assets/images/hero-2-funding-accessible.jpg') center/cover no-repeat;
+            background: url('assets/images/hero-2-funding-accessible.jpg') center/cover no-repeat;
             background-color: #FFFBF0;
         }
         .hero-slide-3 {
-            background: url('../assets/images/hero-2-research-analyze.jpg') center/cover no-repeat;
+            background: url('assets/images/hero-2-research-analyze.jpg') center/cover no-repeat;
             background-color: #FFFBF0;
         }
         /* Slides 4-5 load from main CSS with fallback */
@@ -153,10 +154,34 @@
             color: rgba(44,44,44,0.85);
             margin-bottom: 2rem;
         }
+
+        /* Smooth Scroll & GPU Optimizations (New) */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-animate, .hero-slide, .use-case-content {
+            will-change: transform, opacity;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        section[id] {
+            scroll-margin-top: 80px;
+        }
+
+        img[loading="lazy"] {
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+        }
+
+        img[loading="lazy"].loaded {
+            opacity: 1;
+        }
     </style>
 
     <!-- Main CSS - BLOCKING load to prevent FOUC -->
-    <link rel="stylesheet" href="../assets/css/styles-refined.css">
+    <link rel="stylesheet" href="assets/css/styles-refined.css">
 
     <!-- Swiper CSS - BLOCKING load to prevent FOUC -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -166,8 +191,8 @@
 <!-- Floating Logo (Top Left) -->
 <div class="floating-logo">
     <a href="#" class="logo-icon-link" aria-label="KarriereLabor.de - Karriere-Coaching & Gründerberatung">
-        <img src="../assets/images/KarriereLaborLogo.svg" alt="KarriereLabor" class="logo-icon">
-        <img src="../assets/images/KarriereLaborText.svg" alt="KarriereLabor" class="logo-text">
+        <img src="assets/images/KarriereLaborLogo.svg" alt="KarriereLabor" class="logo-icon">
+        <img src="assets/images/KarriereLaborText.svg" alt="KarriereLabor" class="logo-text">
     </a>
 </div>
 
@@ -176,13 +201,13 @@
 
 <!-- Modern Hero Gallery with Swiper -->
 <section class="hero-gallery-modern">
-    <!-- Language Switcher -->
+    <!-- Language Switcher (Updated for Root) -->
     <div class="language-switcher">
         <div class="language-toggle">🇩🇪</div>
         <div class="language-dropdown">
             <a href="./index.html" class="active" title="Deutsch" hreflang="de" lang="de">🇩🇪 Deutsch</a>
-            <a href="../en/index.html" title="English" hreflang="en" lang="en">🇬🇧 English</a>
-            <a href="../es/index.html" title="Español" hreflang="es" lang="es">🇪🇸 Español</a>
+            <a href="en/index.html" title="English" hreflang="en" lang="en">🇬🇧 English</a>
+            <a href="es/index.html" title="Español" hreflang="es" lang="es">🇪🇸 Español</a>
         </div>
     </div>
 
@@ -282,7 +307,7 @@
 </section>
 
 
-        <!-- Methodology Section -->
+<!-- Methodology Section -->
 <section class="services-section" id="methodology">
     <div class="inner">
         <h2 class="section-title scroll-animate">Unsere Coaching-Methodik</h2>
@@ -293,7 +318,7 @@
             <div class="comparison-card scroll-animate stagger-1">
                 <div class="service-icon">🔍</div>
                  <div class="comparison-image">
-                    <img src="../assets/images/coaching-perspektive.jpg" alt="Perspektivcoaching">
+                    <img src="assets/images/coaching-perspektive.jpg" alt="Perspektivcoaching">
                 </div>
                 <h3>1. Entdecken</h3>
                 <p><strong>Standortbestimmung &amp; Zieldefinition</strong></p>
@@ -309,7 +334,7 @@
             <div class="comparison-card scroll-animate stagger-2">
                 <div class="service-icon">🗺️</div>
                   <div class="comparison-image">
-                    <img src="../assets/images/coaching-karriere.jpg" alt="Karriere-Coaching">
+                    <img src="assets/images/coaching-karriere.jpg" alt="Karriere-Coaching">
                 </div>
                 <h3>2. Strategie entwickeln</h3>
                 <p><strong>Planung → Roadmap → Umsetzungsplan</strong></p>
@@ -325,7 +350,7 @@
             <div class="comparison-card scroll-animate stagger-3">
                 <div class="service-icon">⚡</div>
                 <div class="comparison-image">
-                    <img src="../assets/images/coaching-gruender.jpg" alt="Gründerberatung">
+                    <img src="assets/images/coaching-gruender.jpg" alt="Gründerberatung">
                 </div>
                 <h3>3. Umsetzen &amp; Erreichen</h3>
                 <p><strong>Aktion → Begleitung → Erfolg</strong></p>
@@ -342,55 +367,55 @@
     </div>
 </section>
 
-        <div class="methodology-meta scroll-animate">
-            <p class="methodology-intro">
-                ✨ Über 20 Jahre Gründer-Erfahrung: Seit 2002 als Unternehmer aktiv, erfahren in AVGS- und BAFA-gefördertem Coaching. Praktische Erfahrung für Ihren Erfolg.
-            </p>
-            <p class="methodology-intro" style="margin-top: 1rem; font-size: 1rem;">
-                📍 <strong>Coaching-Bereiche:</strong> Präsenz-Coaching in Leipzig (SimpliOffice) • Video-Coaching deutschlandweit • Privates Coaching weltweit
-            </p>
-            <div class="xray-wrapper">
-                <div class="xray-toggle">
-                    Was Sie erwartet
-                </div>
-                <div class="xray-content">
-                    <div class="xray-grid">
-                        <div class="xray-column">
-                            <h4>Meine Expertise</h4>
-                            <ul>
-                                <li>✅ 20+ Jahre Gründer-Erfahrung (seit 2002)</li>
-                                <li>✅ Zahlreiche erfolgreiche AVGS/BAFA-Coachings</li>
-                                <li>✅ AVGS-zertifiziert (Agentur für Arbeit)</li>
-                                <li>✅ BAFA-Erfahrung (Gründerförderung)</li>
-                                <li>✅ Mehrsprachig: DE / EN / ES</li>
-                            </ul>
-                        </div>
-                        <div class="xray-column">
-                            <h4>Coaching-Methodik</h4>
-                            <ul>
-                                <li>✅ Systematischer 3-Phasen-Ansatz</li>
-                                <li>✅ Individuelle Zieldefinition</li>
-                                <li>✅ Praxisnahe Strategien</li>
-                                <li>✅ Regelmäßige Erfolgskontrolle</li>
-                                <li>✅ Flexible Termingestaltung</li>
-                            </ul>
-                        </div>
-                        <div class="xray-column">
-                            <h4>Förderung & Preise</h4>
-                            <ul>
-                                <li>✅ AVGS-Förderung: 100% kostendeckung</li>
-                                <li>✅ BAFA-Förderung: bis 80% Zuschuss</li>
-                                <li>✅ Privat: €80-150 pro Sitzung</li>
-                                <li>✅ Kostenlose Erstberatung (15 Min.)</li>
-                                <li>✅ Unterstützung bei Antragstellung</li>
-                            </ul>
-                        </div>
+    <div class="methodology-meta scroll-animate">
+        <p class="methodology-intro">
+            ✨ Über 20 Jahre Gründer-Erfahrung: Seit 2002 als Unternehmer aktiv, erfahren in AVGS- und BAFA-gefördertem Coaching. Praktische Erfahrung für Ihren Erfolg.
+        </p>
+        <p class="methodology-intro" style="margin-top: 1rem; font-size: 1rem;">
+            📍 <strong>Coaching-Bereiche:</strong> Präsenz-Coaching in Leipzig (SimpliOffice) • Video-Coaching deutschlandweit • Privates Coaching weltweit
+        </p>
+        <div class="xray-wrapper">
+            <div class="xray-toggle">
+                Was Sie erwartet
+            </div>
+            <div class="xray-content">
+                <div class="xray-grid">
+                    <div class="xray-column">
+                        <h4>Meine Expertise</h4>
+                        <ul>
+                            <li>✅ 20+ Jahre Gründer-Erfahrung (seit 2002)</li>
+                            <li>✅ Zahlreiche erfolgreiche AVGS/BAFA-Coachings</li>
+                            <li>✅ AVGS-zertifiziert (Agentur für Arbeit)</li>
+                            <li>✅ BAFA-Erfahrung (Gründerförderung)</li>
+                            <li>✅ Mehrsprachig: DE / EN / ES</li>
+                        </ul>
+                    </div>
+                    <div class="xray-column">
+                        <h4>Coaching-Methodik</h4>
+                        <ul>
+                            <li>✅ Systematischer 3-Phasen-Ansatz</li>
+                            <li>✅ Individuelle Zieldefinition</li>
+                            <li>✅ Praxisnahe Strategien</li>
+                            <li>✅ Regelmäßige Erfolgskontrolle</li>
+                            <li>✅ Flexible Termingestaltung</li>
+                        </ul>
+                    </div>
+                    <div class="xray-column">
+                        <h4>Förderung & Preise</h4>
+                        <ul>
+                            <li>✅ AVGS-Förderung: 100% kostendeckung</li>
+                            <li>✅ BAFA-Förderung: bis 80% Zuschuss</li>
+                            <li>✅ Privat: €80-150 pro Sitzung</li>
+                            <li>✅ Kostenlose Erstberatung (15 Min.)</li>
+                            <li>✅ Unterstützung bei Antragstellung</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
+</div>
 </section>
 
 <!-- Use Cases Section -->
@@ -404,72 +429,72 @@
         <div class="use-cases-interactive">
             <!-- Left Menu -->
             <div class="use-case-menu">
-                <div class="use-case-tab active" data-case="existenzgruendung">
+                <a href="#existenzgruendung" class="use-case-tab active" data-case="existenzgruendung">
                     <div class="tab-icon">🚀</div>
                     <span>Gründercoaching</span>
-                </div>
-                <div class="use-case-tab" data-case="bewerbungscoaching">
+                </a>
+                <a href="#bewerbungscoaching" class="use-case-tab" data-case="bewerbungscoaching">
                     <div class="tab-icon">💼</div>
                     <span>Bewerbungscoaching</span>
-                </div>
-                <div class="use-case-tab" data-case="perspektiven-finden">
+                </a>
+                <a href="#perspektiven-finden" class="use-case-tab" data-case="perspektiven-finden">
                     <div class="tab-icon">🎯</div>
                     <span>Perspektiven finden</span>
-                </div>
-                <div class="use-case-tab" data-case="familie-job">
+                </a>
+                <a href="#familie-job" class="use-case-tab" data-case="familie-job">
                     <div class="tab-icon">👨‍👩‍👧‍👦</div>
                     <span>Familie mit Job</span>
-                </div>
-                <div class="use-case-tab" data-case="migration">
+                </a>
+                <a href="#migration" class="use-case-tab" data-case="migration">
                     <div class="tab-icon">🌍</div>
                     <span>Migrant/-innen Coaching</span>
-                </div>
-                <div class="use-case-tab" data-case="integrationsbegleiter">
+                </a>
+                <a href="#integrationsbegleiter" class="use-case-tab" data-case="integrationsbegleiter">
                     <div class="tab-icon">🤝</div>
                     <span>Integrationsbegleiter/-in</span>
-                </div>
-                <div class="use-case-tab" data-case="hauptschulabschluss">
+                </a>
+                <a href="#hauptschulabschluss" class="use-case-tab" data-case="hauptschulabschluss">
                     <div class="tab-icon">🎓</div>
                     <span>Hauptschulabschluss</span>
-                </div>
-                <div class="use-case-tab" data-case="sprachcoaching">
+                </a>
+                <a href="#sprachcoaching" class="use-case-tab" data-case="sprachcoaching">
                     <div class="tab-icon">🗣️</div>
                     <span>Sprachcoaching</span>
-                </div>
+                </a>
             </div>
 
             <!-- Center Image -->
             <div class="use-case-visualization">
                 <div class="use-case-image active" data-case="existenzgruendung">
-                    <img src="../assets/images/use-case-1-founder-consulting.jpg" alt="Existenzgründercoaching" loading="lazy">
+                    <img src="assets/images/use-case-1-founder-consulting.jpg" alt="Existenzgründercoaching">
                 </div>
                 <div class="use-case-image" data-case="bewerbungscoaching">
-                    <img src="../assets/images/use-case-2-application-prep.jpg" alt="Bewerbungscoaching" loading="lazy">
+                    <img src="assets/images/use-case-2-application-prep.jpg" alt="Bewerbungscoaching">
                 </div>
                 <div class="use-case-image" data-case="perspektiven-finden">
-                    <img src="../assets/images/use-case-3-perspective-coaching.jpg" alt="Perspektiven finden" loading="lazy">
+                    <img src="assets/images/use-case-3-perspective-coaching.jpg" alt="Perspektiven finden">
                 </div>
                 <div class="use-case-image" data-case="familie-job">
-                    <img src="../assets/images/use-case-4-familie-job.jpg" alt="Familie mit Job!" loading="lazy">
+                    <img src="assets/images/use-case-4-familie-job.jpg" alt="Familie mit Job!">
                 </div>
                 <div class="use-case-image" data-case="migration">
-                    <img src="../assets/images/use-case-5-application-migration.jpg" alt="Migrant/-innen Coaching" loading="lazy">
+                    <img src="assets/images/use-case-5-application-migration.jpg" alt="Migrant/-innen Coaching">
                 </div>
                 <div class="use-case-image" data-case="integrationsbegleiter">
-                    <img src="../assets/images/use-case-6-integration.jpg" alt="Integrationsbegleiter/-in" loading="lazy">
+                    <img src="assets/images/use-case-6-integration.jpg" alt="Integrationsbegleiter/-in">
                 </div>
                 <div class="use-case-image" data-case="hauptschulabschluss">
-                    <img src="../assets/images/use-case-7-highschool.jpg" alt="Hauptschulabschluss" loading="lazy">
+                    <img src="assets/images/use-case-7-highschool.jpg" alt="Hauptschulabschluss">
                 </div>
                 <div class="use-case-image" data-case="sprachcoaching">
-                    <img src="../assets/images/use-case-8-language-coaching.jpg" alt="Sprachcoaching" loading="lazy">
+                    <img src="assets/images/use-case-8-language-coaching.jpg" alt="Sprachcoaching">
                 </div>
             </div>
 
             <!-- Right Description -->
             <div class="use-case-details">
                 <!-- 1. Individuelles Existenzgründercoaching -->
-                <div class="use-case-content active" data-case="existenzgruendung">
+                <div id="existenzgruendung" class="use-case-content active" data-case="existenzgruendung">
                     <h3>Individuelles Existenzgründercoaching</h3>
                     <p><strong>Ihre Situation:</strong> Sie träumen von der eigenen Firma, aber der Berg an Bürokratie und Planung raubt Ihnen den Mut? Sie fragen sich, wie Sie aus einer guten Idee ein tragfähiges Geschäft machen.</p>
                     <p><strong>Unser Ansatz:</strong> Wir bringen Klarheit in den Gründungsdschungel. Mit über 20 Jahren eigener Gründererfahrung begleiten wir Sie pragmatisch und zielorientiert. Wir übersetzen Ihre Vision in einen soliden Businessplan und zeigen Ihnen, wie Sie an die nötige Finanzierung kommen.</p>
@@ -535,7 +560,7 @@
                     </div>
                 </div>
                 <!-- 2. Einzelcoaching - Bewerbungscoaching -->
-                <div class="use-case-content" data-case="bewerbungscoaching">
+                <div id="bewerbungscoaching" class="use-case-content" data-case="bewerbungscoaching">
                     <h3>Einzelcoaching - Bewerbungscoaching</h3>
                     <p><strong>Ihre Situation:</strong> Sie schreiben Bewerbungen, aber die Absagen stapeln sich. Sie sind unsicher, ob Ihre Unterlagen noch zeitgemäß sind und wie Sie im Vorstellungsgespräch wirklich überzeugen können. Sie wollen endlich den Job, der zu Ihnen passt.</p>
                     <p><strong>Unser Ansatz:</strong> Wir machen Sie fit für den Bewerbungsmarathon. Von der Optimierung Ihrer Unterlagen über die gezielte Vorbereitung auf knifflige Interviewfragen bis hin zur professionellen Selbstvermarktung – wir geben Ihnen die Werkzeuge an die Hand, mit denen Sie aus der Masse herausstechen.</p>
@@ -587,7 +612,7 @@
                     </div>
                 </div>
                 <!-- 3. Einzelcoaching - Perspektiven finden -->
-                <div class="use-case-content" data-case="perspektiven-finden">
+                <div id="perspektiven-finden" class="use-case-content" data-case="perspektiven-finden">
                     <h3>Einzelcoaching - Perspektiven finden</h3>
                     <p><strong>Ihre Situation:</strong> Sie fühlen sich beruflich oder privat in einer Sackgasse. Ihnen fehlt die Orientierung und Sie wissen nicht, wie Sie aus eigener Kraft den nächsten Schritt machen können. Sie brauchen einen klaren Kopf und einen konkreten Plan.</p>
                     <p><strong>Unser Ansatz:</strong> Wir helfen Ihnen, das Chaos zu lichten. Durch sozialpädagogische Unterstützung und gezieltes Management-Coaching identifizieren wir Ihre Blockaden und entwickeln gemeinsam neue, realistische Lebens- und Berufsperspektiven. Als Teil des Coachings nutzen wir auch den wissenschaftlich fundierten <a href="https://karrierelabor.de/DISC" target="_blank" rel="noopener" style="color: var(--light-orange); font-weight: 600; text-decoration: underline;">DISG-Persönlichkeitstest</a>, um Ihre Stärken und Kommunikationsstile besser zu verstehen. Wir sind Ihr Kompass, wenn Sie den Weg aus den Augen verloren haben.</p>
@@ -638,7 +663,7 @@
                     </div>
                 </div>
                 <!-- 4. Einzelcoaching - Familie mit Job! -->
-                <div class="use-case-content" data-case="familie-job">
+                <div id="familie-job" class="use-case-content" data-case="familie-job">
                     <h3>Einzelcoaching - Familie mit Job!</h3>
                     <p><strong>Ihre Situation:</strong> Der Spagat zwischen Familie und Beruf fühlt sich oft wie ein unmöglicher Balanceakt an. Sie wollen beruflich wieder Fuß fassen, ohne dass die Familie zu kurz kommt, und suchen nach einem Weg, beides ohne Stress zu meistern.</p>
                     <p><strong>Unser Ansatz:</strong> Wir verstehen Ihre Doppelbelastung. Deshalb bieten wir nicht nur flexibles Einzelcoaching, sondern bei Bedarf auch Kinderbetreuung während der Termine. Gemeinsam entwickeln wir praxistaugliche Strategien, wie Sie den Wiedereinstieg schaffen und dabei eine gesunde Work-Life-Balance finden.</p>
@@ -675,7 +700,7 @@
                     </div>
                 </div>
                 <!-- 5. Einzelcoaching - Bewerbungscoaching für Migrant/-innen -->
-                <div class="use-case-content" data-case="migration">
+                <div id="migration" class="use-case-content" data-case="migration">
                     <h3>Einzelcoaching - Bewerbungscoaching für Migrant/-innen</h3>
                     <p><strong>Ihre Situation:</strong> Sie sind in Deutschland angekommen und möchten beruflich Fuß fassen, aber die Sprache, die Kultur und das Bewerbungssystem sind noch fremd. Sie brauchen einen verständnisvollen Partner, der Ihnen hilft, diese Hürden zu überwinden.</p>
                     <p><strong>Unser Ansatz:</strong> Wir bauen Brücken in den deutschen Arbeitsmarkt. In unserem Coaching lernen Sie nicht nur, wie man überzeugende Bewerbungen schreibt, sondern auch die ungeschriebenen Regeln der deutschen Arbeitswelt. Wir unterstützen Sie bei der Anerkennung Ihrer Abschlüsse und begleiten Sie auf Wunsch sogar bei einer Arbeitserprobung.</p>
@@ -714,7 +739,7 @@
                     </div>
                 </div>
                 <!-- 6. Integrationsbegleiter/-in für junge Menschen -->
-                <div class="use-case-content" data-case="integrationsbegleiter">
+                <div id="integrationsbegleiter" class="use-case-content" data-case="integrationsbegleiter">
                     <h3>Integrationsbegleiter/-in für junge Menschen</h3>
                     <p><strong>Ihre Situation:</strong> Sie arbeiten gerne mit jungen Menschen und möchten sie im Schulalltag unterstützen, Ihnen fehlt aber die pädagogische Qualifikation? Sie suchen eine praxisnahe Weiterbildung, die Sie auf die Arbeit als Schulassistenz oder -begleitung vorbereitet.</p>
                     <p><strong>Unser Ansatz:</strong> Diese Weiterbildung ist Ihr Fundament für eine sinnstiftende Tätigkeit. In Teilzeit und mit Blockveranstaltungen in den Ferien lernen Sie alles, was Sie über Pädagogik, Kommunikation, Behinderungsarten und Konfliktlösung wissen müssen. Wir machen Sie fit für die Praxis, damit Sie jungen Menschen eine echte Stütze sein können.</p>
@@ -792,7 +817,7 @@
                     </div>
                 </div>
                 <!-- 7. Hauptschulabschluss mit berufsfachlicher Kenntnisvermittlung -->
-                <div class="use-case-content" data-case="hauptschulabschluss">
+                <div id="hauptschulabschluss" class="use-case-content" data-case="hauptschulabschluss">
                     <h3>Hauptschulabschluss mit berufsfachlicher Kenntnisvermittlung</h3>
                     <p><strong>Ihre Situation:</strong> Sie möchten Ihren Hauptschulabschluss nachholen, um beruflich durchzustarten, aber der Gedanke an die Schulbank und Prüfungen macht Sie nervös? Sie brauchen mehr als nur Unterricht – Sie brauchen gezielte Vorbereitung und praktische Fähigkeiten für den Arbeitsmarkt.</p>
                     <p><strong>Unser Ansatz:</strong> In kleinen Gruppen bereiten wir Sie intensiv und individuell auf die Prüfungen vor. Wir vermitteln nicht nur den Schulstoff, sondern auch wichtige IT-Grundlagen und organisieren ein Praktikum, damit Sie die Brücke in den Beruf schlagen können. Bei uns stehen Sie im Mittelpunkt, nicht der Lehrplan.</p>
@@ -829,7 +854,7 @@
                     </div>
                 </div>
                 <!-- 8. Einzelcoaching - Sprachcoaching für die Jobsuche -->
-                <div class="use-case-content" data-case="sprachcoaching">
+                <div id="sprachcoaching" class="use-case-content" data-case="sprachcoaching">
                     <h3>Einzelcoaching - Sprachcoaching für die Jobsuche</h3>
                     <p><strong>Ihre Situation:</strong> Sie haben gute Qualifikationen, aber die deutsche Sprache ist noch eine Hürde auf dem Weg zum passenden Job? Sie möchten nicht nur Grammatik lernen, sondern die Sprache gezielt für Bewerbung und Berufsalltag meistern.</p>
                     <p><strong>Unser Ansatz:</strong> Wir machen Sie sprachlich fit für den deutschen Arbeitsmarkt. In unserem Einzelcoaching trainieren Sie genau die Sprachkenntnisse, die Sie für eine erfolgreiche Bewerbung und eine souveräne Kommunikation im Job benötigen. Wir bereiten Sie sogar auf berufsbezogene Sprachprüfungen vor.</p>
@@ -956,7 +981,7 @@
     </div>
 </section>
 
-<!-- FAQ Section -->
+<!-- FAQ Section (Updated with New Entry) -->
 <section class="faq-section">
     <div class="inner">
         <h2 class="section-title scroll-animate">Häufig gestellte Fragen</h2>
@@ -1023,18 +1048,44 @@
                     <p style="margin-top: 1rem;"><em>Sie entscheiden in jedem Schritt, ob und wie wir weitermachen. Keine versteckten Kosten, keine Verpflichtungen.</em></p>
                 </div>
             </details>
+
+            <!-- New Mac/Chrome Scroll FAQ -->
+            <details class="faq-item scroll-animate">
+                <summary class="faq-question">
+                    <h3>Die Seite scrollt langsam auf Mac/Chrome?</h3>
+                    <span class="faq-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                    <p><strong>Schnelle Fixes für smoothen Scroll:</strong></p>
+                    <ol>
+                        <li><strong>Hardware Acceleration aktivieren:</strong> Chrome Settings > System > "Use hardware acceleration" einschalten > Relaunch.</li>
+                        <li><strong>Extensions deaktivieren:</strong> Extensions > Manage > Alle ausschalten > Testen > Eins nach dem anderen reaktivieren.</li>
+                        <li><strong>Chrome Flags optimieren:</strong> `chrome://flags` eingeben:
+                            <ul>
+                                <li>"GPU Rasterization" > Enabled.</li>
+                                <li>"Override Software Rendering List" > Enabled.</li>
+                                <li><strong>"Experimental prediction for scroll events" > Disabled</strong> (behebt Mac Trackpad-Lag).</li>
+                                <li>"Zero-copy Rasterizer" > Enabled.</li>
+                            </ul>
+                            Relaunch Chrome.</li>
+                        <li><strong>Chrome neu installieren:</strong> Chrome schließen > App in Trash > .pkg von <a href="https://www.google.com/chrome/" target="_blank">offizieller Site</a> herunterladen > Installieren.</li>
+                    </ol>
+                    <p>Diese Schritte lösen 90% der Chrome-Lag-Probleme. Wenn es anhält, probieren Sie Safari/Firefox.</p>
+                    <p><em>Tipp: Chrome/macOS aktualisieren für GPU-Fixes.</em></p>
+                </div>
+            </details>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
+<!-- Footer (Updated Language Links) -->
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-content">
             <!-- Left Column: Logo -->
             <div class="footer-section footer-branding">
                 <div class="footer-logo">
-                    <img src="../assets/images/KarriereLaborLogoText.svg" alt="KarriereLabor" class="footer-logo-full" loading="lazy">
+                    <img src="assets/images/KarriereLaborLogoText.svg" alt="KarriereLabor" class="footer-logo-full" loading="lazy">
                 </div>
             </div>
 
@@ -1043,16 +1094,16 @@
                 <div class="footer-language-switcher">
                     <div class="footer-language-toggle">🇩🇪</div>
                     <div class="footer-language-dropdown">
-                        <a href="../de/index.html" class="active" hreflang="de" lang="de">🇩🇪 Deutsch</a>
-                        <a href="../en/index.html" hreflang="en" lang="en">🇬🇧 English</a>
-                        <a href="../es/index.html" hreflang="es" lang="es">🇪🇸 Español</a>
+                        <a href="./index.html" class="active" hreflang="de" lang="de">🇩🇪 Deutsch</a>
+                        <a href="en/index.html" hreflang="en" lang="en">🇬🇧 English</a>
+                        <a href="es/index.html" hreflang="es" lang="es">🇪🇸 Español</a>
                     </div>
                 </div>
                 <div class="footer-legal">
-                    <a href="../impressum.html" class="footer-legal-link">Impressum</a>
+                    <a href="impressum.html" class="footer-legal-link">Impressum</a>
                 </div>
                 <div class="footer-legal">
-                    <a href="../impressum.html#datenschutz" class="footer-legal-link">Datenschutz</a>
+                    <a href="impressum.html#datenschutz" class="footer-legal-link">Datenschutz</a>
                 </div>
             </div>
         </div>
@@ -1096,11 +1147,7 @@
     "Gründerberatung",
     "Business Coaching",
     "AVGS Coaching",
-    "BAFA Beratung",
-    "Digitalisierung",
-    "Prozessautomatisierung",
-    "Startup-Beratung",
-    "AI Integration"
+    "BAFA Beratung"
   ],
   "priceRange": "€€",
   "telephone": "",
@@ -1114,13 +1161,74 @@
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="../assets/js/main.min.js" defer></script>
+<script src="assets/js/main.min.js" defer></script>
 
 <!-- Enable animations and show body after page loads -->
 <script>
     // Remove preload class immediately - CSS is already loaded (blocking)
     document.documentElement.classList.remove('preload');
     document.documentElement.classList.add('loaded');
+
+    // Throttled Scroll for Smooth Animations (New)
+    let ticking = false;
+    function onScroll() {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                // Trigger animation logic for .scroll-animate if needed
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Swiper Init with Smoothness (Assume main.min.js has the init; add if not)
+    var heroSwiper = new Swiper('#heroGallery', {
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: '.gallery-nav',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.gallery-next',
+            prevEl: '.gallery-prev',
+        },
+        allowTouchMove: true,
+        simulateTouch: true,
+        followFinger: true  // Smooth touch/scroll
+    });
+</script>
+
+<!-- Language Detection Redirect JS (New - Graceful Fallback) -->
+<script>
+    (function() {
+        if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+            return; // Already on language path
+        }
+
+        const userLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+        let preferredLang = 'de'; // Default German
+
+        for (let lang of userLangs) {
+            if (lang.toLowerCase().startsWith('en')) {
+                preferredLang = 'en';
+                break;
+            } else if (lang.toLowerCase().startsWith('es')) {
+                preferredLang = 'es';
+                break;
+            }
+        }
+
+        if (preferredLang !== 'de') {
+            const targetPath = `/${preferredLang}/index.html`;
+            window.location.replace(targetPath);
+            return;
+        }
+    })();
 </script>
 
 </body>

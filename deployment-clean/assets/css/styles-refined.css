@@ -930,6 +930,12 @@ body {
     z-index: 2;
 }
 
+.comparison-image picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .comparison-image img {
     width: 100%;
     height: 100%;
@@ -1247,6 +1253,12 @@ body {
 
 .use-case-image.active {
     opacity: 1;
+}
+
+.use-case-image picture {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .use-case-image img {

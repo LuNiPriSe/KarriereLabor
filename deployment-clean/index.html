@@ -1334,9 +1334,14 @@
     });
 </script>
 
-<!-- Language Detection Redirect JS (New - Graceful Fallback) -->
+<!-- Language Detection Redirect JS (Respects User Choice) -->
 <script>
     (function() {
+        // Check if user has manually selected a language in this session
+        if (sessionStorage.getItem('languageManuallySelected')) {
+            return; // User chose this language intentionally, don't redirect
+        }
+
         if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
             return; // Already on language path
         }
@@ -1360,6 +1365,16 @@
             return;
         }
     })();
+
+    // Mark language as manually selected when user clicks language links
+    document.addEventListener('DOMContentLoaded', function() {
+        const languageLinks = document.querySelectorAll('.language-dropdown a, .footer-language-dropdown a');
+        languageLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                sessionStorage.setItem('languageManuallySelected', 'true');
+            });
+        });
+    });
 </script>
 
 </body>

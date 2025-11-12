@@ -1214,5 +1214,18 @@
     document.documentElement.classList.add('loaded');
 </script>
 
+<!-- Mark language selection to prevent auto-redirect -->
+<script>
+    // Mark language as manually selected when user clicks language links
+    document.addEventListener('DOMContentLoaded', function() {
+        const languageLinks = document.querySelectorAll('.language-dropdown a, .footer-language-dropdown a');
+        languageLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                sessionStorage.setItem('languageManuallySelected', 'true');
+            });
+        });
+    });
+</script>
+
 </body>
 </html>

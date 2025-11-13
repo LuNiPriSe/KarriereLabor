@@ -4,6 +4,7 @@
     <title>KarriereLabor Leipzig - Coaching de Carrera & Asesoría de Fundadores | AVGS & BAFA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="es">
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Coaching de carrera y asesoría de fundadores en Leipzig, Alemania. Coaching presencial en Leipzig, coaching por video en toda Alemania, consultoría privada en todo el mundo. Financiado por AVGS & BAFA. SimpliOffice Leipzig.">
@@ -154,6 +155,23 @@
             color: rgba(44,44,44,0.85);
             margin-bottom: 2rem;
         }
+
+        /* Smooth Scroll & GPU Optimizations (New) */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-animate, .hero-slide, .use-case-content {
+            will-change: transform, opacity;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        section[id] {
+            scroll-margin-top: 80px;
+        }
+
+
     </style>
 
     <!-- Main CSS - BLOCKING load to prevent FOUC -->
@@ -244,7 +262,7 @@
                     <source srcset="../assets/images/hero-2-research-analyze-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
                     <source srcset="../assets/images/hero-2-research-analyze-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
                     <source srcset="../assets/images/hero-2-research-analyze-desktop.avif" media="(min-width: 1280px)" type="image/avif">
-                    <source srcset="../assets/images/hero-2-research-analyze-desktop.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                    <source srcset="../assets/images/hero-2-research-analyze-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                     <img src="../assets/images/hero-2-research-analyze-desktop.jpg" alt="" loading="eager" width="1024" height="1024">
                 </picture>
                 <div class="slide-content">
@@ -512,28 +530,92 @@
             <!-- Center Image -->
             <div class="use-case-visualization">
                 <div class="use-case-image active" data-case="existenzgruendung">
-                    <img src="../assets/images/use-case-1-founder-consulting.jpg" alt="Coaching individual para la creación de empresas" loading="lazy">
+                    <picture>
+                        <source srcset="../assets/images/use-case-1-founder-consulting-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-1-founder-consulting-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-1-founder-consulting-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-1-founder-consulting-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-1-founder-consulting-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-1-founder-consulting-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                        <img src="../assets/images/use-case-1-founder-consulting-desktop.jpg" alt="Coaching individual para la creación de empresas" loading="lazy" width="800" height="800">
+                    </picture>
                 </div>
                 <div class="use-case-image" data-case="bewerbungscoaching">
-                    <img src="../assets/images/use-case-2-application-prep.jpg" alt="Coaching individual - Coaching de aplicación" loading="lazy">
+                    <picture>
+                        <source srcset="../assets/images/use-case-2-application-prep-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-2-application-prep-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-2-application-prep-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-2-application-prep-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-2-application-prep-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-2-application-prep-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                        <img src="../assets/images/use-case-2-application-prep-desktop.jpg" alt="Coaching individual - Coaching de aplicación" loading="lazy" width="1024" height="1024">
+                    </picture>
                 </div>
                 <div class="use-case-image" data-case="perspektiven-finden">
-                    <img src="../assets/images/use-case-3-perspective-coaching.jpg" alt="Coaching individual - Encontrar perspectivas" loading="lazy">
+                    <picture>
+                        <source srcset="../assets/images/use-case-3-perspective-coaching-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-3-perspective-coaching-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-3-perspective-coaching-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-3-perspective-coaching-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-3-perspective-coaching-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-3-perspective-coaching-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                        <img src="../assets/images/use-case-3-perspective-coaching-desktop.jpg" alt="Coaching individual - Encontrar perspectivas" loading="lazy" width="1024" height="1024">
+                    </picture>
                 </div>
                 <div class="use-case-image" data-case="familie-job">
-                    <img src="../assets/images/use-case-4-familie-job.jpg" alt="Coaching individual - ¡Familia con trabajo!" loading="lazy">
+                    <picture>
+                        <source srcset="../assets/images/use-case-4-familie-job-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-4-familie-job-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-4-familie-job-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-4-familie-job-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-4-familie-job-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-4-familie-job-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                        <img src="../assets/images/use-case-4-familie-job-desktop.jpg" alt="Coaching individual - ¡Familia con trabajo!" loading="lazy" width="1024" height="1024">
+                    </picture>
                 </div>
                 <div class="use-case-image" data-case="migration">
-                    <img src="../assets/images/use-case-5-application-migration.jpg" alt="Coaching individual - Coaching de aplicación para migrantes" loading="lazy">
+                    <picture>
+                        <source srcset="../assets/images/use-case-5-application-migration-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-5-application-migration-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-5-application-migration-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-5-application-migration-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-5-application-migration-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-5-application-migration-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                        <img src="../assets/images/use-case-5-application-migration-desktop.jpg" alt="Coaching individual - Coaching de aplicación para migrantes" loading="lazy" width="1024" height="1024">
+                    </picture>
                 </div>
                 <div class="use-case-image" data-case="integrationsbegleiter">
-                    <img src="../assets/images/use-case-6-integration.jpg" alt="Asistente de integración para jóvenes" loading="lazy">
+                    <picture>
+                        <source srcset="../assets/images/use-case-6-integration-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-6-integration-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-6-integration-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-6-integration-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-6-integration-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-6-integration-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                        <img src="../assets/images/use-case-6-integration-desktop.jpg" alt="Asistente de integración para jóvenes" loading="lazy" width="1024" height="1024">
+                    </picture>
                 </div>
                 <div class="use-case-image" data-case="hauptschulabschluss">
-                    <img src="../assets/images/use-case-7-highschool.jpg" alt="Diploma de secundaria con conocimientos profesionales" loading="lazy">
+                    <picture>
+                        <source srcset="../assets/images/use-case-7-highschool-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-7-highschool-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-7-highschool-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-7-highschool-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-7-highschool-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-7-highschool-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                        <img src="../assets/images/use-case-7-highschool-desktop.jpg" alt="Diploma de secundaria con conocimientos profesionales" loading="lazy" width="864" height="1184">
+                    </picture>
                 </div>
                 <div class="use-case-image" data-case="sprachcoaching">
-                    <img src="../assets/images/use-case-8-language-coaching.jpg" alt="Coaching individual - Coaching de idiomas para la búsqueda de empleo" loading="lazy">
+                    <picture>
+                        <source srcset="../assets/images/use-case-8-language-coaching-mobile.avif" media="(max-width: 767px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-8-language-coaching-mobile.webp" media="(max-width: 767px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-8-language-coaching-tablet.avif" media="(min-width: 768px) and (max-width: 1279px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-8-language-coaching-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+                        <source srcset="../assets/images/use-case-8-language-coaching-desktop.avif" media="(min-width: 1280px)" type="image/avif">
+                        <source srcset="../assets/images/use-case-8-language-coaching-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                        <img src="../assets/images/use-case-8-language-coaching-desktop.jpg" alt="Coaching individual - Coaching de idiomas para la búsqueda de empleo" loading="lazy" width="1024" height="1024">
+                    </picture>
                 </div>
             </div>
 

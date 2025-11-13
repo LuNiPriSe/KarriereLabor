@@ -1334,26 +1334,6 @@
         }
     }
     window.addEventListener('scroll', onScroll, { passive: true });
-
-    // Swiper Init with Smoothness (Assume main.min.js has the init; add if not)
-    var heroSwiper = new Swiper('#heroGallery', {
-        loop: true,
-        effect: 'fade',
-        autoplay: {
-            delay: 5000,
-        },
-        pagination: {
-            el: '.gallery-nav',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.gallery-next',
-            prevEl: '.gallery-prev',
-        },
-        allowTouchMove: true,
-        simulateTouch: true,
-        followFinger: true  // Smooth touch/scroll
-    });
 </script>
 
 <!-- Language Detection Redirect JS (Respects User Choice) -->

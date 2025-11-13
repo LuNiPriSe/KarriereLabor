@@ -219,6 +219,18 @@ body {
     z-index: 1;
 }
 
+/* Hero background image container - prevent Ken Burns overflow */
+.hero-bg-image {
+    overflow: hidden;
+}
+
+/* Ken Burns effect applied to background image for smooth zoom/pan */
+.hero-bg-image img {
+    animation: kenBurns 20s ease-in-out infinite alternate;
+    will-change: transform;
+    transform-origin: center center;
+}
+
 .hero-slide {
     position: relative;
     width: 100%;
@@ -229,7 +241,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: kenBurns 20s ease-in-out infinite alternate;
 }
 
 /* Ken Burns Effect - Enhanced background animation */
@@ -244,7 +255,7 @@ body {
 
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
-    .hero-slide {
+    .hero-bg-image img {
         animation: none;
     }
 }

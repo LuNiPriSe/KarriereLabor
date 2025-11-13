@@ -229,6 +229,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: kenBurns 20s ease-in-out infinite alternate;
+}
+
+/* Ken Burns Effect - Subtle background animation */
+@keyframes kenBurns {
+    0% {
+        transform: scale(1) translateX(0);
+    }
+    100% {
+        transform: scale(1.05) translateX(-2%);
+    }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .hero-slide {
+        animation: none;
+    }
 }
 
 /* Modern Slide Backgrounds with Enhanced Moving Gradients */
@@ -531,6 +549,11 @@ body {
         -8px -8px 16px rgba(255, 255, 255, 0.7),
         0 0 30px rgba(255, 3, 3, 0.2),
         0 0 50px rgba(254, 204, 2, 0.15);
+}
+
+/* Accelerate border rotation on hover */
+.karriere-button:hover::before {
+    animation-duration: 3s; /* Accelerated from 5s */
 }
 
 /* Active state - pressed effect */
@@ -1239,11 +1262,13 @@ body {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.98);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center;
-    will-change: opacity;
+    will-change: opacity, transform;
     width: 100%;
     height: 100%;
     /* Ensure images fill container consistently */
@@ -1253,6 +1278,20 @@ body {
 
 .use-case-image.active {
     opacity: 1;
+    transform: scale(1);
+    animation: imageEnter 0.5s ease;
+}
+
+/* Image entrance animation */
+@keyframes imageEnter {
+    0% {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .use-case-image picture {
@@ -1285,7 +1324,10 @@ body {
 .use-case-content {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s 0.3s;
+    transform: translateY(20px);
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0s 0.4s;
     padding: 0 var(--space-sm);
     pointer-events: none;
 }
@@ -1293,7 +1335,10 @@ body {
 .use-case-content.active {
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s 0s;
+    transform: translateY(0);
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0s 0s;
     pointer-events: auto;
     position: relative;
     z-index: 1;
@@ -1373,6 +1418,7 @@ body {
     box-shadow: 0 2px 12px rgba(254, 204, 2, 0.2);
     border-color: var(--karriere-gold);
     background: var(--pure-white);
+    transform: scale(1.05) rotate(2deg);
 }
 
 /* White info box - border only visible when open */
@@ -3166,10 +3212,10 @@ body.slide-transition {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
     gap: var(--space-2xl);
     margin-bottom: var(--space-lg);
-    align-items: center;
+    align-items: start;
 }
 
 .footer-section h3 {
@@ -3361,7 +3407,11 @@ body.slide-transition {
 
 /* Center Column: Profile - HIDDEN */
 .footer-profile {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-md);
 }
 
 .footer-profile .profile-image {

@@ -948,17 +948,22 @@ body {
 /* Card subtitle styling - process flow */
 .card-subtitle {
     font-family: var(--font-primary);
-    font-size: clamp(0.95rem, 1.8vw, 1.125rem);
+    font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--karriere-gold);
     text-align: center;
     margin: calc(var(--space-md) * -0.5) auto var(--space-lg) auto;
-    padding: 0 var(--space-sm);
+    padding: 0;
     line-height: 1.4;
+    display: block;
+    width: 100%;
 }
 
 .card-subtitle strong {
     font-weight: 600;
     letter-spacing: 0.02em;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 
 .comparison-icon .service-icon {
